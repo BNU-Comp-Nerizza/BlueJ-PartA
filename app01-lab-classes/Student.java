@@ -15,6 +15,8 @@ public class Student
     private String id;
     // the amount of credits for study taken so far
     private int credits;
+    // the course of the student
+    private Course addCourse;
     
     /**
      * Create a new student with a given name and ID number.
@@ -76,12 +78,21 @@ public class Student
     {
         return name.substring(0,4) + id.substring(0,3);
     }
+        
+     /**
+     * Return the course of the student including the code number and course title
+     */
+    public void addCourse(String newCourse)
+    {
+        addCourse.getcodeNum();
+        addCourse.getcourseTitle();
+    }
     
     /**
      * Print the student's name and ID number to the output terminal.
      */
     public void print()
     {
-        System.out.println(name + ", student ID: " + id + ", credits: " + credits);
+        System.out.println(name + ", student ID: " + id + ", credits: " + credits + ", course: " + addCourse);
     }
 }
