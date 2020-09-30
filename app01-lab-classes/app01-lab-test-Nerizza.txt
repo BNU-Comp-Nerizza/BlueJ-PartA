@@ -1,0 +1,18 @@
+LabClass co452Lab = new LabClass(10);
+co452Lab.setInstructor("Nicholas Day");
+co452Lab.setRoom("G100");
+co452Lab.setTime("Wednesday, 30th September 2020, 10: am");
+Student student1 = new Student("Queen Bucks", "12345678");
+Student student2 = new Student("King Shire", "87654321");
+Student student3 = new Student("Princess Mitten", "24681357");
+student1.getCredits()
+    returned int 0
+student1.addCredits(20);
+student2.addCredits(20);
+student3.addCredits(20);
+student1.changeName("Queen");
+student2.changeName("King");
+student3.changeName("Princess");
+co452Lab.enrollStudent(student1);
+co452Lab.enrollStudent(student2);
+co452Lab.enrollStudent(student3);
