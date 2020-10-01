@@ -16,16 +16,17 @@ public class Student
     // the amount of credits for study taken so far
     private int credits;
     // the course of the student
-    private Course addCourse;
+    private Course newCourse;
     
     /**
      * Create a new student with a given name and ID number.
      */
-    public Student(String fullName, String studentID)
+    public Student(String fullName, String studentID, Course fullCourse)
     {
         name = fullName;
         id = studentID;
         credits = 0;
+        newCourse= fullCourse;
     }
 
     /**
@@ -82,10 +83,10 @@ public class Student
      /**
      * Return the course of the student including the code number and course title
      */
-    public void addCourse(String newCourse)
+    public void addCourse(Course newCourse)
     {
-        addCourse.getcodeNum();
-        addCourse.getcourseTitle();
+        newCourse.getcodeNum();
+        newCourse.getcourseTitle();
     }
     
     /**
@@ -93,6 +94,9 @@ public class Student
      */
     public void print()
     {
-        System.out.println(name + ", student ID: " + id + ", credits: " + credits + ", course: " + addCourse);
+        System.out.println(name + ", student ID: " + id + ", credits: " + credits);
+        
+        newCourse.printCourse();
+       
     }
 }

@@ -37,5 +37,9 @@ public class Course
         return courseTitle;
     }
     
+    public void printCourse()
+    {
+        System.out.println("course code: " + codeNum + ", course title: " + courseTitle);
+    }
     
 }
