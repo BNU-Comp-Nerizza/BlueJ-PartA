@@ -1,9 +1,5 @@
-
-
-
-
 import java.util.Date;
-import java.text.SimpleDateFormat;
+import java.text.SimpleDateFormat;  
 /**
  * Write a description of class Ticket here.
  *
@@ -15,11 +11,11 @@ public class Ticket
     // instance variables - replace the example below with your own
     private String location;
     private int charge;
-        // date
+    // date
     private Date today = new Date();
     private SimpleDateFormat formatter = new SimpleDateFormat("dd/MMM/yyyy");
     
-       /**
+    /**
      * Please choose your destination:
      * "High Wycombe" or "Amersham"or "Alysebury" 
      */
@@ -34,7 +30,7 @@ public class Ticket
         return location;
     }
     
-    public void getCharge(String destination)
+    public void addCharge(String destination)
     {
         
         if (destination == "High wycombe")
@@ -55,11 +51,29 @@ public class Ticket
                               }
     }
     
+    public int getCharge()
+    {
+        return charge;
+    }
+    
     public void printDestination()
     {
              System.out.println("# Your chosen destination: " + location);
-             System.out.println("# Your charge is: " + charge);
+             System.out.println("# Ticket cost is: " + charge);
              System.out.println("# Date ticket have been purchased: " + today);  
+    }   
+        
+    public void printAllticket()
+    {
+        int highwycombe = 330;
+        int amersham = 300;
+        int aylsebury = 200;
+        int sum;
+        sum = highwycombe + amersham + aylsebury;
+        System.out.println("# Your chosen destination: High Wycombe, Amersham and Aylsebury");
+        System.out.println("# Your Total charge is: " + sum);
+        System.out.println("# Date ticket have been purchased: " + today); 
+        
     }
     
 }
