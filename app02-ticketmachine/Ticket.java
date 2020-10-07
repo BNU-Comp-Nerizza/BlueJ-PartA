@@ -59,7 +59,7 @@ public class Ticket
     {
              System.out.println("# Your chosen destination: " + location);
              System.out.println("# Your charge is: " + charge);
-             System.out.println("# Date ticket purchased: " + today);  
+             System.out.println("# Date ticket have been purchased: " + today);  
     }
     
 }
