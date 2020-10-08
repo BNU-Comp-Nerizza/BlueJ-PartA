@@ -1,25 +1,27 @@
 /**
  * Write a description of class Ticket here.
  *
- * @author ()
- * @version (a version number or a date)
+ * @author Nerizza Flores
+ * @version (09/10/2020)
  */
 public class Ticket 
 {
-    // instance variables - replace the example below with your own
+    // instance variables for the location of the ticket
     public String location;
+    // for the price of the ticket
     public int charge;
     
     /**
      * Please choose your destination:
-     * "High Wycombe" or "Amersham"or "Alysebury" 
+     * "High Wycombe" or "Amersham"or "Aylsebury"
+     * once you have chosen your destination, it will show the price of the ticket
      */
     public String addTicket(String destination)
     {
         location = destination;
         charge = 0;
         
-        if (location == "High wycombe")
+        if (location == "High Wycombe")
         {
             charge = 330;
             System.out.println("High Wycombe ticket cost: " + charge);
@@ -42,6 +44,9 @@ public class Ticket
         return location;
     }
     
+    /**
+     * @Return The price of a ticket.
+             */
     
     public int getCharge()
     {

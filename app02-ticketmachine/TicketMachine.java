@@ -23,15 +23,14 @@ import java.text.SimpleDateFormat;
     private int balance;
     // The total amount of money collected by this machine.
     private int total;
-    // destination
+    // The destination of the ticket 
     public Ticket destination;
-    //date
+    // The date the ticket was purchased
     private Date today = new Date();
     private SimpleDateFormat formatter = new SimpleDateFormat("dd/MMM/yyyy");
             
     /**
-    * Create a machine that issues tickets of the given price.
-             */
+    * Create a machine that issues tickets*/
     public TicketMachine()
     {
        location = "unknown";
@@ -50,8 +49,7 @@ import java.text.SimpleDateFormat;
       
     /**
     * Receive an amount of money from a customer.
-    * Check that the amount is sensible.
-             */
+    * Check that the amount is sensible. */
     public void insertMoney(int amount)
        {
            if(amount == 10) 
