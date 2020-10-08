@@ -30,18 +30,17 @@ public class Ticket
         return location;
     }
     
-    public void addCharge(String destination)
+    public void addCharge()
     {
-        
-        if (destination == "High wycombe")
+       if (location == "High wycombe")
         {
             charge = 330;
         }
-           else if (destination == "Amersham")
+           else if (location == "Amersham")
             {
                charge = 300;
             }
-            else if (destination == "Aylsebury")
+            else if (location == "Aylsebury")
             {
                 charge = 200;
             }
