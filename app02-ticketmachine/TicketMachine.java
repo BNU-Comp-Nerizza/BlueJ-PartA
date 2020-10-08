@@ -15,7 +15,7 @@ import java.text.SimpleDateFormat;
          * Date: 07/10/2020
          */
  
- public class TicketMachine 
+ public class TicketMachine extends Ticket
     {
     // The price of a ticket from this machine.
     private int price;
@@ -32,31 +32,22 @@ import java.text.SimpleDateFormat;
     /**
     * Create a machine that issues tickets of the given price.
              */
-    public TicketMachine(int cost)
+    public TicketMachine()
     {
-       
-       price = cost;
+       location = "unknown";
+       price = charge;
        balance = 0;
        total = 0;
     }
-            
+        
     /**
      * @Return The price of a ticket.
              */
     public int getPrice()
     {
-       return price;
+        return getCharge();
     }
-        
-    /**
-    * Return The amount of money already inserted for the
-    * next ticket.
-    */
-    public int getBalance()
-    {
-       return balance;
-    }
-        
+      
     /**
     * Receive an amount of money from a customer.
     * Check that the amount is sensible.
@@ -67,33 +58,33 @@ import java.text.SimpleDateFormat;
                 {
                    balance = balance + amount;
                    System.out.println("Total amount money inserted: " + balance);
-                   total = price - balance;
+                   total = charge - balance;
                    System.out.println("Your current balance: " + total);
-                   System.out.println("Your ticket price: " + price);
+                   System.out.println("Your ticket price: " + charge);
                 }
                 else  if (amount == 20)
                 {
                     balance = balance + amount;
                     System.out.println("Total amount money inserted: " + balance);
-                    total = price - balance;
+                    total = charge - balance;
                     System.out.println("Your current balance: " + total);
-                    System.out.println("Your ticket price: " + price);
+                    System.out.println("Your ticket price: " + charge);
                 }
                 else if (amount == 100)
                 {
                     balance = balance + amount;
                     System.out.println("Total amount money inserted: " + balance);
-                    total = price - balance;
+                    total = charge - balance;
                     System.out.println("Your current balance: " + total);
-                    System.out.println("Your ticket price: " + price);
+                    System.out.println("Your ticket price: " + charge);
                 }
                  else if (amount == 200)
                 {
                     balance = balance + amount;
                     System.out.println("Total amount money inserted: " + balance);
-                    total = price - balance;
+                    total = charge - balance;
                     System.out.println("Your current balance: " + total);
-                    System.out.println("Your ticket price: " + price);
+                    System.out.println("Your ticket price: " + charge);
                     }
                     else 
                     {
@@ -114,9 +105,8 @@ import java.text.SimpleDateFormat;
             System.out.println("##################");
             System.out.println("# The BlueJ Line");
             System.out.println("# Ticket");
-            System.out.println("# " + price + " cents.");
-            System.out.println("# Your chosen destination: "  );
-            System.out.println("# Ticket cost is: " + destination.getCharge());
+            System.out.println("# Your chosen destination: " + location );
+            System.out.println("# Ticket cost is: " + charge);
             System.out.println("# Date ticket have been purchased: " + today);  
             System.out.println("##################");
            
@@ -124,7 +114,7 @@ import java.text.SimpleDateFormat;
         else 
         {
             System.out.println("You must insert at least: " +
-                               (price - balance) + " more cents.");
+                               (charge - balance) + " more cents.");
                     
         }
     }
