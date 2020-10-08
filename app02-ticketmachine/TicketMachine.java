@@ -14,7 +14,7 @@
          */
         
         
-        public class TicketMachine
+public class TicketMachine
         {
            // The price of a ticket from this machine.
             private int price;
@@ -53,7 +53,7 @@
                 return balance;
             }
         
-                /**
+                    /**
              * Receive an amount of money from a customer.
              * Check that the amount is sensible.
              */
@@ -93,7 +93,7 @@
                             }
     }
 
-                  /**
+                             /**
      * Print a ticket if enough money has been inserted, and
      * reduce the current balance by the ticket price. Print
      * an error message if more money is required.
