@@ -13,78 +13,78 @@
          * Date: 07/10/2020
          */
         
-        
-public class TicketMachine
-        {
-           // The price of a ticket from this machine.
-            private int price;
-            // The amount of money entered by a customer so far.
-            private int balance;
-            // The total amount of money collected by this machine.
-            private int total;
-            // destination
-            private Ticket destination;
+public class TicketMachine 
+    {
+    // The price of a ticket from this machine.
+    private int price;
+    // The amount of money entered by a customer so far.
+    private int balance;
+    // The total amount of money collected by this machine.
+    private int total;
+    // destination
+    public Ticket destination;
         
             
-            /**
-             * Create a machine that issues tickets of the given price.
+    /**
+    * Create a machine that issues tickets of the given price.
              */
-            public TicketMachine(int cost)
-            {
-                price = cost;
-                balance = 0;
-                total = 0;
-            }
+    public TicketMachine(int cost)
+    {
+       price = cost;
+       balance = 0;
+       total = 0;
+    }
             
-            /**
-             * @Return The price of a ticket.
+    /**
+     * @Return The price of a ticket.
              */
-            public int getPrice()
-            {
-                return price;
-            }
+    public int getPrice()
+    {
+       return price;
+    }
         
-            /**
-             * Return The amount of money already inserted for the
-             * next ticket.
-             */
-            public int getBalance()
-            {
-                return balance;
-            }
+    /**
+    * Return The amount of money already inserted for the
+    * next ticket.
+    */
+    public int getBalance()
+    {
+       return balance;
+    }
         
-                    /**
-             * Receive an amount of money from a customer.
-             * Check that the amount is sensible.
+    /**
+    * Receive an amount of money from a customer.
+    * Check that the amount is sensible.
              */
-            public void insertMoney(int amount)
-            {
-                if(amount == 10) 
+    public void insertMoney(int amount)
+       {
+       
+           if(amount == 10) 
                 {
                     balance = balance + amount;
                     System.out.println("Total amount money inserted: " + amount);
-                    balance = price - amount;
-                    System.out.println("Your current balance: " + balance);
+                    balance = balance - price;
+                    System.out.println("Your current balance: " + total);
                 }
                         else if (amount == 20)
                         {
                     balance = balance + amount;
                     System.out.println("Total amount money inserted: " + amount);
-                    balance = price - amount;
+                    balance = balance - price;
                     System.out.println("Your current balance: " + balance);
                 }
                           else if (amount == 100)
                             {
                     balance = balance + amount;
                     System.out.println("Total amount money inserted: " + amount);
-                    balance = price - amount;
+                    balance = balance - price;
                     System.out.println("Your current balance: " + balance);
                 }
                              else if (amount == 200)
                                 {
                         balance = balance + amount;
                         System.out.println("Total amount money inserted: " + amount);
-                        balance = price - amount;
+                        balance = balance - price;
                         System.out.println("Your current balance: " + balance);
                     }
                     else 
@@ -93,7 +93,7 @@ public class TicketMachine
                             }
     }
 
-                             /**
+        /**
      * Print a ticket if enough money has been inserted, and
      * reduce the current balance by the ticket price. Print
      * an error message if more money is required.

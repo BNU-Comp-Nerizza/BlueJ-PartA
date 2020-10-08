@@ -24,7 +24,7 @@ public class Ticket
         location = destination;
         charge = 0;
     }
-    
+
     public String getLocation()
     {
         return location;
@@ -61,18 +61,5 @@ public class Ticket
              System.out.println("# Ticket cost is: " + charge);
              System.out.println("# Date ticket have been purchased: " + today);  
     }   
-        
-    public void printAllticket()
-    {
-        int highwycombe = 330;
-        int amersham = 300;
-        int aylsebury = 200;
-        int sum;
-        sum = highwycombe + amersham + aylsebury;
-        System.out.println("# Your chosen destination: High Wycombe, Amersham and Aylsebury");
-        System.out.println("# Your Total charge is: " + sum);
-        System.out.println("# Date ticket have been purchased: " + today); 
-        
-    }
-    
+       
 }
