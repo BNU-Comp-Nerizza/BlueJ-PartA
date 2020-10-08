@@ -9,27 +9,21 @@ import java.text.SimpleDateFormat;
 public class Ticket
 {
     // instance variables - replace the example below with your own
-    private String location;
-    private int charge;
-    // date
-    private Date today = new Date();
-    private SimpleDateFormat formatter = new SimpleDateFormat("dd/MMM/yyyy");
+    
+    public String location;
+    public int charge;
     
     /**
      * Please choose your destination:
      * "High Wycombe" or "Amersham"or "Alysebury" 
      */
-    public Ticket(String destination)
+    public String Ticket(String destination)
     {
         location = destination;
         charge = 0;
-    }
-
-    public String getLocation()
-    {
         return location;
     }
-    
+
     public void addCharge()
     {
        if (location == "High wycombe")
@@ -54,12 +48,4 @@ public class Ticket
     {
         return charge;
     }
-    
-    public void printDestination()
-    {
-             System.out.println("# Your chosen destination: " + location);
-             System.out.println("# Ticket cost is: " + charge);
-             System.out.println("# Date ticket have been purchased: " + today);  
-    }   
-       
 }
