@@ -1,0 +1,199 @@
+ticketMa1.insertMoney(10);
+Total amount money inserted: 10
+Your current balance: 290
+Your ticket price: 300
+ticketMa1.insertMoney(500);
+You can only insert 10p, 20, £1.00 and £2.00 coins instead of 500 p
+ticketMa1.insertMoney(20);
+Total amount money inserted: 30
+Your current balance: 270
+Your ticket price: 300
+ticketMa1.insertMoney(270);
+You can only insert 10p, 20, £1.00 and £2.00 coins instead of 270 p
+ticketMa1.insertMoney(200);
+Total amount money inserted: 230
+Your current balance: 70
+Your ticket price: 300
+ticketMa1.insertMoney(20);
+Total amount money inserted: 250
+Your current balance: 50
+Your ticket price: 300
+ticketMa1.insertMoney(20);
+Total amount money inserted: 270
+Your current balance: 30
+Your ticket price: 300
+ticketMa1.insertMoney(20);
+Total amount money inserted: 290
+Your current balance: 10
+Your ticket price: 300
+ticketMa1.insertMoney(10);
+Total amount money inserted: 300
+Your current balance: 0
+Your ticket price: 300
+ticketMa1.printTicket();
+##################
+# The BlueJ Line
+# Ticket
+# Your chosen destination: Amersham
+# Ticket cost is: 300
+# Date ticket have been purchased: Sat Oct 10 23:28:59 BST 2020
+##################
+ticketMa1.refundBalance()
+    returned int 300
+ticketMa1.getPrice()
+    returned int 300
+TicketMachine Ticket1 = new TicketMachine();
+TicketMachine Ticket2 = new TicketMachine();
+TicketMachine Ticket3 = new TicketMachine();
+Ticket1.amershamTicket()
+Your destination is: Amersham
+Your ticket cost is: 300
+Please insert money
+    returned int 300
+Ticket2.aylseburyTicket()
+Your destination is: Aylsebury
+Your ticket cost is: 200
+Please insert money
+    returned int 200
+Ticket3.highwycombeTicket()
+Your destination is: High Wycombe
+Your ticket cost is: 330
+Please insert money
+    returned int 330
+Ticket1.insertMoney(500);
+You can only insert 10p, 20, £1.00 and £2.00 coins instead of 500 p
+Ticket1.insertMoney(5);
+You can only insert 10p, 20, £1.00 and £2.00 coins instead of 5 p
+Ticket1.insertMoney(200);
+Total amount money inserted: 200
+Your current balance: 100
+Your ticket price: 300
+Ticket1.insertMoney(200);
+Total amount money inserted: 400
+Your current balance: -100
+Your ticket price: 300
+Ticket1.refundBalance()
+    returned int 400
+Ticket1.insertMoney(200);
+Total amount money inserted: 200
+Your current balance: 100
+Your ticket price: 300
+Ticket1.insertMoney(100);
+Total amount money inserted: 300
+Your current balance: 0
+Your ticket price: 300
+Ticket1.printTicket();
+##################
+# The BlueJ Line
+# Ticket
+# Your chosen destination: Amersham
+# Ticket cost is: 300
+# Date ticket have been purchased: Sat Oct 10 23:31:24 BST 2020
+##################
+TicketMachine Ticket1 = new TicketMachine();
+TicketMachine Ticket2 = new TicketMachine();
+TicketMachine Ticket3 = new TicketMachine();
+TicketMachine Ticket1 = new TicketMachine();
+Ticket1.amershamTicket()
+Your destination is: Amersham
+Your ticket cost is: 300
+Please insert money
+    returned int 300
+Ticket1.insertMoney(200);
+Total amount money inserted: 200
+Your current balance: 100
+Your ticket price: 300
+Ticket1.insertMoney(200);
+Total amount money inserted: 400
+Your current balance: -100
+Your ticket price: 300
+Ticket1.refundBalance()
+    returned int 400
+Ticket1.insertMoney(200);
+Total amount money inserted: 200
+Your current balance: 100
+Your ticket price: 300
+Ticket1.insertMoney(100);
+Total amount money inserted: 300
+Your current balance: 0
+Your ticket price: 300
+Ticket1.printTicket();
+##################
+# The BlueJ Line
+# Ticket
+# Your chosen destination: Amersham
+# Ticket cost is: 300
+# Date ticket have been purchased: Sat Oct 10 23:37:42 BST 2020
+##################
+TicketMachine ticket2 = new TicketMachine();
+ticket2.aylseburyTicket()
+Your destination is: Aylsebury
+Your ticket cost is: 200
+Please insert money
+    returned int 200
+ticket2.insertMoney(5);
+You can only insert 10p, 20, £1.00 and £2.00 coins instead of 5 p
+ticket2.getBalance()
+    returned int 0
+ticket2.insertMoney(200);
+Total amount money inserted: 200
+Your current balance: 0
+Your ticket price: 200
+ticket2.printTicket();
+##################
+# The BlueJ Line
+# Ticket
+# Your chosen destination: Aylsebury
+# Ticket cost is: 200
+# Date ticket have been purchased: Sat Oct 10 23:39:24 BST 2020
+##################
+TicketMachine Ticket3 = new TicketMachine();
+Ticket3.highwycombeTicket()
+Your destination is: High Wycombe
+Your ticket cost is: 330
+Please insert money
+    returned int 330
+Ticket3.insertMoney(200);
+Total amount money inserted: 200
+Your current balance: 130
+Your ticket price: 330
+Ticket3.insertMoney(100);
+Total amount money inserted: 300
+Your current balance: 30
+Your ticket price: 330
+Ticket3.insertMoney(30);
+You can only insert 10p, 20, £1.00 and £2.00 coins instead of 30 p
+Ticket3.insertMoney(20);
+Total amount money inserted: 320
+Your current balance: 10
+Your ticket price: 330
+Ticket3.insertMoney(100);
+Total amount money inserted: 420
+Your current balance: -90
+Your ticket price: 330
+Ticket3.refundBalance()
+    returned int 420
+Ticket3.insertMoney(200);
+Total amount money inserted: 200
+Your current balance: 130
+Your ticket price: 330
+Ticket3.insertMoney(100);
+Total amount money inserted: 300
+Your current balance: 30
+Your ticket price: 330
+Ticket3.insertMoney(20);
+Total amount money inserted: 320
+Your current balance: 10
+Your ticket price: 330
+Ticket3.insertMoney(10);
+Total amount money inserted: 330
+Your current balance: 0
+Your ticket price: 330
+Ticket3.printTicket();
+##################
+# The BlueJ Line
+# Ticket
+# Your chosen destination: High Wycombe
+# Ticket cost is: 330
+# Date ticket have been purchased: Sat Oct 10 23:40:41 BST 2020
+##################

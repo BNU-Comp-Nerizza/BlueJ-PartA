@@ -44,6 +44,14 @@ import java.text.SimpleDateFormat;
     {
         return getCharge();
     }
+    
+        /**
+     * @Return The price of a ticket.
+             */
+    public int getBalance()
+    {
+        return balance;
+    }
       
     /**
     * Receive an amount of money from a customer.
@@ -95,7 +103,7 @@ import java.text.SimpleDateFormat;
      */
     public void printTicket()
     {
-        if(balance >= price) 
+        if(balance >= charge) 
         {
             // Simulate the printing of a ticket.
             System.out.println("##################");

@@ -30,6 +30,7 @@ public class Ticket
         charge = 330;
         System.out.println("Your destination is: " + location);
         System.out.println("Your ticket cost is: " + charge);
+        System.out.println("Please insert money");
         return charge;
     }
     
@@ -41,7 +42,8 @@ public class Ticket
        location = "Amersham";
        charge = 300;
         System.out.println("Your destination is: " + location);
-        System.out.println("Your ticket cost is: " + charge);;
+        System.out.println("Your ticket cost is: " + charge);
+        System.out.println("Please insert money");
        return charge;
     }
     
@@ -55,6 +57,7 @@ public class Ticket
         charge = 200;
         System.out.println("Your destination is: " + location);
         System.out.println("Your ticket cost is: " + charge);
+        System.out.println("Please insert money");
         return charge;
     }
     
