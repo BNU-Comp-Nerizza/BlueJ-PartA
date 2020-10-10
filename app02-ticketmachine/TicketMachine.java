@@ -130,7 +130,7 @@ import java.text.SimpleDateFormat;
             System.out.println("# The BlueJ Line");
             System.out.println("# Ticket");
             System.out.println("# Your chosen destination: High Wycombe & Aylsebury & Amersham");
-            System.out.println("# Ticket cost is: " + AllTicket());
+            System.out.println("# Ticket cost is: " + allTicket());
             System.out.println("# Date ticket have been purchased: " + today);  
             System.out.println("##################");
           
