@@ -23,8 +23,6 @@ import java.text.SimpleDateFormat;
     private int balance;
     // The total amount of money collected by this machine.
     private int total;
-    // The destination of the ticket 
-    public Ticket destination;
     // The date the ticket was purchased
     private Date today = new Date();
     private SimpleDateFormat formatter = new SimpleDateFormat("dd/MMM/yyyy");
@@ -52,7 +50,7 @@ import java.text.SimpleDateFormat;
     * Check that the amount is sensible. */
     public void insertMoney(int amount)
        {
-           if(amount == 10) 
+          if(amount == 10) 
                 {
                    balance = balance + amount;
                    System.out.println("Total amount money inserted: " + balance);
@@ -86,7 +84,7 @@ import java.text.SimpleDateFormat;
                     }
                     else 
                     {
-                        System.out.println("You can only insert 10p, 20, £1.00 and £2.00 coins " + amount);
+                        System.out.println("You can only insert 10p, 20, £1.00 and £2.00 coins instead of " + amount + " p");
                     }
     }
 
@@ -103,7 +101,7 @@ import java.text.SimpleDateFormat;
             System.out.println("##################");
             System.out.println("# The BlueJ Line");
             System.out.println("# Ticket");
-            System.out.println("# Your chosen destination: " + location );
+            System.out.println("# Your chosen destination: " + getLocation());
             System.out.println("# Ticket cost is: " + charge);
             System.out.println("# Date ticket have been purchased: " + today);  
             System.out.println("##################");
