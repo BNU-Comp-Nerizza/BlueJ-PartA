@@ -47,7 +47,7 @@ import java.text.SimpleDateFormat;
       
     /**
     * Receive an amount of money from a customer.
-    * Check that the amount is sensible. */
+    * Check that the amount is within the declared amount. */
     public void insertMoney(int amount)
        {
           if(amount == 10) 
