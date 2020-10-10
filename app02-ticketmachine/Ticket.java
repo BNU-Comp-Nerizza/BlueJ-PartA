@@ -1,4 +1,5 @@
-
+import java.util.Date;
+import java.text.SimpleDateFormat;    
 /**
  * Ticket Class provides users the information 
  * about the cost and location of their journey.
@@ -14,6 +15,9 @@ public class Ticket
     public String location;
     // for the price of the ticket
     public int charge;
+    // The date the ticket was purchased
+    private Date today = new Date();
+    private SimpleDateFormat formatter = new SimpleDateFormat("dd/MMM/yyyy");
     
     /**
      * Please choose your destination:
@@ -54,11 +58,24 @@ public class Ticket
     public int aylseburyTicket()
     {
         location = "Aylsebury";
-        charge = 200;
+        charge = 220;
         System.out.println("Your destination is: " + location);
         System.out.println("Your ticket cost is: " + charge);
         System.out.println("Please insert money");
         return charge;
+    }
+      
+    /**
+     * Returns the ticket for all location with the total cost
+     */
+        public int allTicket()
+    {
+        int highwycombe = 330;
+        int aylsebury = 220;
+        int amersham = 300;
+        int sum;
+        sum = highwycombe + aylsebury + amersham;
+        return sum;
     }
     
     /**

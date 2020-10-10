@@ -122,7 +122,21 @@ import java.text.SimpleDateFormat;
                     
         }
     }
-
+    
+        public void printAllTicket()
+    {
+            // Simulate the printing of all ticket.
+            System.out.println("##################");
+            System.out.println("# The BlueJ Line");
+            System.out.println("# Ticket");
+            System.out.println("# Your chosen destination: High Wycombe & Aylsebury & Amersham");
+            System.out.println("# Ticket cost is: " + AllTicket());
+            System.out.println("# Date ticket have been purchased: " + today);  
+            System.out.println("##################");
+          
+    }
+    
+    
     /**
      * Return the money in the balance.
      * The balance is cleared.
