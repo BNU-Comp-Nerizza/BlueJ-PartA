@@ -7,8 +7,9 @@
  */
 public class Course
 {
-    // instance variables 
+    // instance variables of the course code
     private String codeNum;
+    // instance variables of the course title
     private String courseTitle;
 
     /**
@@ -37,6 +38,9 @@ public class Course
         return courseTitle;
     }
     
+         /**
+     * print out the course
+     */
     public void printCourse()
     {
         System.out.println("course code: " + codeNum + ", course title: " + courseTitle);
