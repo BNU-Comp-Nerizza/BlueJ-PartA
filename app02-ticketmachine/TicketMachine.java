@@ -113,7 +113,11 @@ import java.text.SimpleDateFormat;
             System.out.println("# Ticket cost is: " + charge);
             System.out.println("# Date ticket have been purchased: " + today);  
             System.out.println("##################");
-           
+            
+            //Update the total collected with the price
+            total = total - charge;
+            // Reduce the balance by the price
+            balance = balance - charge;
         }
         else 
         {
