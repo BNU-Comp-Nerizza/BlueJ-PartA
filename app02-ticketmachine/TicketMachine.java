@@ -45,7 +45,7 @@ import java.text.SimpleDateFormat;
         return getCharge();
     }
     
-        /**
+      /**
      * @Return The price of a ticket.
              */
     public int getBalance()
@@ -135,7 +135,6 @@ import java.text.SimpleDateFormat;
             System.out.println("##################");
           
     }
-    
     
     /**
      * Return the money in the balance.

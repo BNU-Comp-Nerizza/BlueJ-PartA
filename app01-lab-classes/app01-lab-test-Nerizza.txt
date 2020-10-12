@@ -1,18 +1,28 @@
-LabClass co452Lab = new LabClass(10);
+LabClass co452Lab = new LabClass(3);
 co452Lab.setInstructor("Nicholas Day");
 co452Lab.setRoom("G100");
-co452Lab.setTime("Wednesday, 30th September 2020, 10: am");
-Student student1 = new Student("Queen Bucks", "12345678");
-Student student2 = new Student("King Shire", "87654321");
-Student student3 = new Student("Princess Mitten", "24681357");
-student1.getCredits()
-    returned int 0
-student1.addCredits(20);
-student2.addCredits(20);
-student3.addCredits(20);
-student1.changeName("Queen");
-student2.changeName("King");
-student3.changeName("Princess");
-co452Lab.enrollStudent(student1);
-co452Lab.enrollStudent(student2);
-co452Lab.enrollStudent(student3);
+co452Lab.setTime("Wednesday, 30th September 2020, 10 am");
+Course Cybersecurity = new Course("CY132", "BSc (Hon) Cybersecurity");
+Student Queen = new Student("Queen Bucks", "21345342", Cybersecurity);
+Student King = new Student("King Bucks", "234123456", Cybersecurity);
+Student Princess = new Student("Princess Mitten", "31245235", Cybersecurity);
+Queen.addCredits(20);
+King.addCredits(20);
+Princess.addCredits(20);
+Queen.changeName("Queen");
+King.changeName("King");
+Princess.changeName("Princess");
+co452Lab.enrollStudent(Queen);
+co452Lab.enrollStudent(King);
+co452Lab.enrollStudent(Princess);
+co452Lab.printList();
+Lab class Wednesday, 30th September 2020, 10 am
+Instructor: Nicholas Day   Room: G100
+Class list:
+Queen, student ID: 21345342, credits: 20
+course code: CY132, course title: BSc (Hon) Cybersecurity
+King, student ID: 234123456, credits: 20
+course code: CY132, course title: BSc (Hon) Cybersecurity
+Princess, student ID: 31245235, credits: 20
+course code: CY132, course title: BSc (Hon) Cybersecurity
+Number of students: 3
