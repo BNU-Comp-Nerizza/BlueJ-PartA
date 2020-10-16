@@ -17,15 +17,15 @@ public class Module
     /**
      * Create a new Course with code number and title of the course.
      */
-    public Module(String code, String title, int mark)
+    public Module(String code, String title)
     {
         // initialise instance variables
         moduleNum= code;
         moduleTitle= title;
-        moduleMark = mark;
-    }
+        moduleMark = 0;
+    }   
     
-    public int printMark()
+    public int addMark(int moduleMark)
     {
        System.out.print("Module grade is " + moduleMark + " = ");
         
@@ -71,7 +71,6 @@ public class Module
     public void print()
     {
         System.out.println("Module code: " + moduleNum + " Module Title: " + moduleTitle + " Module Mark: " + moduleMark);
-       
     }
 
 }

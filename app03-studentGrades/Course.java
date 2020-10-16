@@ -13,6 +13,7 @@ public class Course
     private String courseTitle;
     
     private ArrayList<Module> modules;
+    private int capacity;
     private int credits;
 
     /**
@@ -25,17 +26,22 @@ public class Course
         courseTitle= title;
         
         modules = new ArrayList<Module>();
+        capacity = 4;
         credits = 0;
     }
     
     public void addModule(Module newModule)
     {
-        if(modules.add(newModule))
-        {
-            System.out.println("Module " + newModule.getmoduleTitle() + "  have been added");
-        }
+        if(modules.size() == capacity)
+           {
+            System.out.println("You have enough module for this course");
+           }
+        else
+           {
+             modules.add(newModule);
+             System.out.println("Module " + newModule.getmoduleTitle() + "  have been added");
+           }
     }
-    
     
      /**
      * Return the code number of the course
@@ -53,7 +59,7 @@ public class Course
         return courseTitle;
     }
     
-        /**
+      /**
      * print out the course
      */
     public void printCourse()
@@ -67,5 +73,5 @@ public class Course
             }   
         }
     }
-    
+        
 }
