@@ -1,4 +1,6 @@
 import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * The Student class represents a student in a student administration system.
@@ -17,8 +19,6 @@ public class Student
     private int credits;
     // the course of the student
     private Course newCourse;
-    // the instance for credits
-    private Course newModule;
     
     /**
      * Create a new student with a given name and ID number.
@@ -58,10 +58,5 @@ public class Student
         newCourse.printCourse();
        
     }
-    
-    public void calculateFinalgrade()
-    {
-         
-    }
-    
+   
 }

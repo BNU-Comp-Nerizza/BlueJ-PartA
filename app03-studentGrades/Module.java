@@ -1,15 +1,15 @@
 
 /**
- * Write a description of class Course here.
+ * Write a description of class Module here.
  *
  * @Nerizza Flores
  * @30/09/2020
  */
 public class Module
 {
-    // instance variables of the course code
+    // instance variables of the module code
     private String moduleNum;
-    // instance variables of the course title
+    // instance variables of the module title
     private String moduleTitle;
     // instance variable 
     private int moduleMark; 
@@ -53,7 +53,7 @@ public class Module
     }
     
     /**
-     * Return the code number of the course
+     * Return the code number of the module
      */
     public String getmoduleNum()
     {
@@ -61,7 +61,7 @@ public class Module
     }
     
     /**
-     * Return the title of the course
+     * Return the title of the module
      */
     public String getmoduleTitle()
     {
