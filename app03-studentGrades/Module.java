@@ -3,7 +3,7 @@
  * Write a description of class Module here.
  *
  * @Nerizza Flores
- * @30/09/2020
+ * @15/10/2020
  */
 public class Module
 {
@@ -25,31 +25,26 @@ public class Module
         moduleMark = 0;
     }   
     
-    public int addMark(int moduleMark)
+    public char addMark(int moduleMark)
     {
-       System.out.print("Module grade is " + moduleMark + " = ");
-        
+        System.out.print("Module grade is " + moduleMark);
         if (moduleMark >= 0 && moduleMark <= 39)
         {
-            System.out.print("F");
+            return 'F';
         }
          else if (moduleMark >=40 && moduleMark <= 49)
         {
-            System.out.print("D");
+            return 'D';
         }
         else if (moduleMark >=50 && moduleMark <= 59)
         {
-            System.out.print("C");
+            return 'C';
         }
                 else if (moduleMark >=60 && moduleMark <= 69)
         {
-            System.out.print("B");
+            return 'B';
         }
-                else if (moduleMark >=70 && moduleMark <= 100)
-        {
-            System.out.print("A");
-        }
-                    return moduleMark; 
+            return 'A';       
     }
     
     /**

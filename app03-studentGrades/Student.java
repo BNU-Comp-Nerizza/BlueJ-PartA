@@ -42,11 +42,14 @@ public class Student
     /**
      * Return the course of the student including the code number and course title
      */
-    public void addCourse(Course newCourse)
+    public void enroll(Course newCourse)
     {
         newCourse.getcodeNum();
         newCourse.getcourseTitle();
+
     }
+    
+    
     
     /**
      * Print the student's name and ID number to the output terminal.

@@ -1,9 +1,12 @@
 import java.util.*;
+import java.util.ArrayList;
+import java.util.Scanner;
+
 /**
  * Write a description of class Course here.
  *
  * @Nerizza Flores
- * @30/09/2020
+ * @15/10/2020
  */
 public class Course
 {
@@ -28,20 +31,20 @@ public class Course
         capacity = 4;
     }
     
-     public void addModule(Module newModule)
+      public void addModule(Module newModule)
     {
         if(modules.size() == capacity)
            {
-            System.out.println("You have enough module for this course");
+             System.out.println("You have enough module for this course");
            }
         else
            {
-             modules.add(newModule);
-             System.out.println("Module " + newModule.getmoduleTitle() + "  have been added");
+              modules.add(newModule);
+              System.out.println("Module " + newModule.getmoduleTitle() + "  have been added");
            }
     }
-    
-     /**
+
+    /**
      * Return the code number of the course
      */
     public String getcodeNum()
@@ -49,7 +52,7 @@ public class Course
         return codeNum;
     }
      
-     /**
+    /**
      * Return the title of the course
      */
     public String getcourseTitle()
@@ -57,7 +60,7 @@ public class Course
         return courseTitle;
     }
     
-      /**
+    /**
      * print out the course
      */
      public void printCourse()
