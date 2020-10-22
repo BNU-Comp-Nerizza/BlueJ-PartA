@@ -23,12 +23,11 @@ public class Student
     /**
      * Create a new student with a given name and ID number.
      */
-    public Student(String fullName, String studentID, Course fullCourse)
+    public Student(String fullName, String studentID)
     {
         name = fullName;
         id = studentID;
         credits = 0;
-        newCourse= fullCourse;
     }
 
      /**
@@ -42,14 +41,10 @@ public class Student
     /**
      * Return the course of the student including the code number and course title
      */
-    public void enroll(Course newCourse)
+    public void enroll(Course fullCourse)
     {
-        newCourse.getcodeNum();
-        newCourse.getcourseTitle();
-
+        newCourse= fullCourse;
     }
-    
-    
     
     /**
      * Print the student's name and ID number to the output terminal.
@@ -57,9 +52,12 @@ public class Student
     public void print()
     {
         System.out.println(name + ", student ID: " + id + ", credits: " + credits);
-        
         newCourse.printCourse();
-       
+        System.out.println("Final Mark: ");
+        newCourse.getFinalMark();
+        System.out.println("Final Grade: ");
+        newCourse.getFinalGrade();
+        System.out.println("Final Credit: ");
+        newCourse.getFinalCredits();
     }
-   
 }

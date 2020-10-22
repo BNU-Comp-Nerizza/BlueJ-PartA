@@ -14,10 +14,20 @@ public class Course
     private String codeNum;
     // instance variables of the course title
     private String courseTitle;
-    
+    //finalCredit
+    private int finalCredit;
+    //
+    private int mark;
+    //
+    private int finalMark;
+    //
+    private char grade;
+    //
     private ArrayList<Module> modules;
-    private int capacity;
-
+    //
+    private Module module;
+  
+    
     /**
      * Create a new Course with code number and title of the course.
      */
@@ -26,24 +36,53 @@ public class Course
         // initialise instance variables
         codeNum= code;
         courseTitle= title;
-        
         modules = new ArrayList<Module>();
-        capacity = 4;
     }
     
-      public void addModule(Module newModule)
+    public void addModule(Module newModule)
     {
-        if(modules.size() == capacity)
-           {
-             System.out.println("You have enough module for this course");
-           }
-        else
-           {
-              modules.add(newModule);
-              System.out.println("Module " + newModule.getmoduleTitle() + "  have been added");
-           }
+       modules.add(newModule);
+       System.out.println("Module (" + newModule.getmoduleTitle() + ") have been added.");
     }
 
+    public void addfinalCredits()
+    {
+        for (Module module : modules)
+        {
+            finalCredit = finalCredit + module.getCredits();
+        }
+    }
+    
+    public void addfinalGrade()
+    {
+        for (Module module : modules)
+        {
+           mark = mark + module.getMark();
+           finalMark = mark / 4;
+        if (mark >= 0 && mark <= 39)
+        {
+            grade = 'F';
+        }
+            else if (mark >=40 && mark <= 49)
+           {
+                grade = 'D';
+            }
+                else if (mark >=50 && mark <= 59)
+                {
+                    grade = 'C';
+                }
+                  else if (mark >=60 && mark <= 69)
+                  {
+                      grade = 'B';
+                    }
+                     else if (mark >=70 && mark <= 100)
+                     {
+                      grade = 'A';
+                      }
+        }     
+        
+    }
+        
     /**
      * Return the code number of the course
      */
@@ -51,7 +90,25 @@ public class Course
     {
         return codeNum;
     }
-     
+         
+    /**
+     * Return the code number of the course
+     */
+    public char getFinalGrade()
+    {
+        return grade;
+    }
+    
+    public int getFinalCredits()
+    {
+        return finalCredit;
+    }
+    
+      public int getFinalMark()
+    {
+        return finalMark;
+    }
+    
     /**
      * Return the title of the course
      */
@@ -70,7 +127,7 @@ public class Course
         {
          for (Module module : modules)
          {
-             module.print();
+             module.printModule();
             }   
         }
     }

@@ -1,4 +1,3 @@
-
 /**
  * Write a description of class Module here.
  *
@@ -8,11 +7,13 @@
 public class Module
 {
     // instance variables of the module code
-    private String moduleNum;
+    private String code;
     // instance variables of the module title
-    private String moduleTitle;
+    private String title;
     // instance variable 
-    private int moduleMark; 
+    private int mark; 
+    //
+    private int credits;
 
     /**
      * Create a new Course with code number and title of the course.
@@ -20,52 +21,58 @@ public class Module
     public Module(String code, String title)
     {
         // initialise instance variables
-        moduleNum= code;
-        moduleTitle= title;
-        moduleMark = 0;
+        this.code= code;
+        this.title= title;
+        credits = 0;
+        mark = 0;
     }   
     
-    public char addMark(int moduleMark)
+    public void addMark(int mark)
     {
-        System.out.print("Module grade is " + moduleMark);
-        if (moduleMark >= 0 && moduleMark <= 39)
+        this.mark = mark;
+    }
+    
+    public void addCredits()
+    {
+        if (mark >= 39)
         {
-            return 'F';
+            credits = 15;
         }
-         else if (moduleMark >=40 && moduleMark <= 49)
+        else if (mark < 39)
         {
-            return 'D';
+            System.out.println("Not enough credits for this module");
         }
-        else if (moduleMark >=50 && moduleMark <= 59)
-        {
-            return 'C';
-        }
-                else if (moduleMark >=60 && moduleMark <= 69)
-        {
-            return 'B';
-        }
-            return 'A';       
     }
     
     /**
      * Return the code number of the module
      */
-    public String getmoduleNum()
+    public String getmoduleCode()
     {
-        return moduleNum;
+        return code;
     }
     
+    public int getCredits()
+    {
+       return credits;
+    }
+    
+    public int getMark()
+    {
+       return mark;
+    }
+   
     /**
      * Return the title of the module
      */
     public String getmoduleTitle()
     {
-        return moduleTitle;
+        return title;
     }
     
-    public void print()
+    public void printModule()
     {
-        System.out.println("Module code: " + moduleNum + " Module Title: " + moduleTitle + " Module Mark: " + moduleMark);
+        System.out.println("Module code: " + code + ", Module Title: " + title + ", Module Mark: " + mark + "%");
     }
 
 }
