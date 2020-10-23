@@ -11,40 +11,45 @@ import java.util.Scanner;
 public class Course
 {
     // instance variables of the course code
-    private String codeNum;
+    private String code;
     // instance variables of the course title
-    private String courseTitle;
-    //finalCredit
+    private String title;
+    // instance variables of the course Credit
     private int finalCredit;
-    //
+    // instance variables of the course Mark
     private int mark;
-    //
+    // instance variables of the course final Mark
     private int finalMark;
-    //
+    // instance variables of the course final Grade
     private char grade;
-    //
+    // Array list for the class module
     private ArrayList<Module> modules;
-    //
+    // instance variables of the module
     private Module module;
-  
-    
+
     /**
      * Create a new Course with code number and title of the course.
      */
     public Course(String code, String title)
     {
         // initialise instance variables
-        codeNum= code;
-        courseTitle= title;
+        this.code= code;
+        this.title= title;
         modules = new ArrayList<Module>();
     }
     
+        /**
+     * Method for adding module to the course
+     */
     public void addModule(Module newModule)
     {
        modules.add(newModule);
        System.out.println("Module (" + newModule.getmoduleTitle() + ") have been added.");
     }
 
+     /**
+     * Calculate the number of credit points this student has accumulated.
+     */
     public void addfinalCredits()
     {
         for (Module module : modules)
@@ -53,12 +58,15 @@ public class Course
         }
     }
     
+         /**
+     * Calculate the number of grade this student has accumulated.
+     */
     public void addfinalGrade()
     {
         for (Module module : modules)
         {
-           mark = mark + module.getMark();
-           finalMark = mark / 4;
+          mark = mark + module.getMark();
+          finalMark = mark / 4;
         if (mark >= 0 && mark <= 39)
         {
             grade = 'F';
@@ -80,7 +88,6 @@ public class Course
                       grade = 'A';
                       }
         }     
-        
     }
         
     /**
@@ -88,7 +95,7 @@ public class Course
      */
     public String getcodeNum()
     {
-        return codeNum;
+        return code;
     }
          
     /**
@@ -99,12 +106,18 @@ public class Course
         return grade;
     }
     
+     /**
+     * Return the final credits of the student
+     */
     public int getFinalCredits()
     {
         return finalCredit;
     }
     
-      public int getFinalMark()
+     /**
+     * Return the final mark of the student
+     */
+    public int getFinalMark()
     {
         return finalMark;
     }
@@ -114,15 +127,15 @@ public class Course
      */
     public String getcourseTitle()
     {
-        return courseTitle;
+        return title;
     }
     
     /**
-     * print out the course
+     * print out the course details and its module
      */
      public void printCourse()
     {
-        System.out.println("course code: " + codeNum + ", course title: " + courseTitle);
+        System.out.println("course code: " + code + ", course title: " + title);
         System.out.println("List of the modules: " );
         {
          for (Module module : modules)
@@ -131,6 +144,4 @@ public class Course
             }   
         }
     }
-        
-    
 }

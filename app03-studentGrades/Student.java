@@ -15,10 +15,8 @@ public class Student
     private String name;
     // the student ID
     private String id;
-    // the amount of credits for study taken so far
-    private int credits;
     // the course of the student
-    private Course newCourse;
+    private Course course;
     
     /**
      * Create a new student with a given name and ID number.
@@ -27,23 +25,14 @@ public class Student
     {
         name = fullName;
         id = studentID;
-        credits = 0;
     }
-
-     /**
-     * Return the number of credit points this student has accumulated.
-     */
-    public int getCredits()
-    {
-        return credits;
-    }
-    
+  
     /**
      * Return the course of the student including the code number and course title
      */
-    public void enroll(Course fullCourse)
+    public void enroll(Course course)
     {
-        newCourse= fullCourse;
+        this.course= course;
     }
     
     /**
@@ -51,13 +40,17 @@ public class Student
      */
     public void print()
     {
-        System.out.println(name + ", student ID: " + id + ", credits: " + credits);
-        newCourse.printCourse();
-        System.out.println("Final Mark: ");
-        newCourse.getFinalMark();
-        System.out.println("Final Grade: ");
-        newCourse.getFinalGrade();
-        System.out.println("Final Credit: ");
-        newCourse.getFinalCredits();
+        System.out.println("Student name: " + name + ", student ID: " + id);
+        course.printCourse();
+    }
+    
+     /**
+     * Print the student final marks and grades to the output terminal
+     */
+    public void printFinalGrade()
+    {
+        System.out.println("Final Mark: " + course.getFinalMark());
+        System.out.println("Final Grade: " + course.getFinalGrade());
+        System.out.println("Final Credit: " + course.getFinalCredits());
     }
 }
