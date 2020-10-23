@@ -3,7 +3,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
- * Write a description of class Course here.
+ * It holds the course details relevant in our context.
  *
  * @Nerizza Flores
  * @15/10/2020
