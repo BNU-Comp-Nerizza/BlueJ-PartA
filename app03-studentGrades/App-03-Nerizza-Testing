@@ -1,0 +1,53 @@
+Student Jones = new Student("Jones Pearson", "16006925");
+Course Cybersecurity = new Course("CY200", "BSc Cybersecurity");
+Module CompArch = new Module("CO450", "Computer Architecture");
+Module DigiTech = new Module("CO454", "Digital Technologies and Professional Practice");
+Module Programming = new Module("CO452", "Programming Concept");
+Module WebDev = new Module("CO456", "Web Development");
+CompArch.addMark(80);
+DigiTech.addMark(40);
+DigiTech.addCredits();
+Not enough credits for this module
+Programming.addMark(40);
+WebDev.addMark(90);
+
+CompArch.printModule();
+Module code: CO450, Module Title: Computer Architecture, Module Mark: 80%
+DigiTech.printModule();
+Module code: CO454, Module Title: Digital Technologies and Professional Practice, Module Mark: 40%
+Programming.printModule();
+Module code: CO452, Module Title: Programming Concept, Module Mark: 40%
+WebDev.printModule();
+Module code: CO456, Module Title: Web Development, Module Mark: 90%
+
+Cybersecurity.addModule(CompArch);
+Module (Computer Architecture) have been added.
+Cybersecurity.addModule(DigiTech);
+Module (Digital Technologies and Professional Practice) have been added.
+Cybersecurity.addModule(Programming);
+Module (Programming Concept) have been added.
+Cybersecurity.addModule(WebDev);
+Module (Web Development) have been added.
+Cybersecurity.addfinalCredits();
+Cybersecurity.addfinalGrade();
+Cybersecurity.printCourse();
+course code: CY200, course title: BSc Cybersecurity
+List of the modules: 
+Module code: CO450, Module Title: Computer Architecture, Module Mark: 80%
+Module code: CO454, Module Title: Digital Technologies and Professional Practice, Module Mark: 40%
+Module code: CO452, Module Title: Programming Concept, Module Mark: 40%
+Module code: CO456, Module Title: Web Development, Module Mark: 90%
+
+Jones.enroll(Cybersecurity);
+Jones.print();
+Student name: Jones Pearson, student ID: 16006925
+course code: CY200, course title: BSc Cybersecurity
+List of the modules: 
+Module code: CO450, Module Title: Computer Architecture, Module Mark: 80%
+Module code: CO454, Module Title: Digital Technologies and Professional Practice, Module Mark: 40%
+Module code: CO452, Module Title: Programming Concept, Module Mark: 40%
+Module code: CO456, Module Title: Web Development, Module Mark: 90%
+Jones.printFinalGrade();
+Final Mark: 62
+Final Grade: A
+Final Credit: 60
