@@ -31,9 +31,16 @@ public class Module
      * Method for awarding mark to a module 
      * 
      */
-    public void addMark(int mark)
+    public void awardMark(int mark)
     {
+        if((mark >= 0) && (mark <= 100))
+        {
         this.mark = mark;
+        }
+        else 
+        {
+            System.out.println("mark is not valid");
+        }
         //after adding mark it will automatically convert mark to credits
         addCredits();
     }

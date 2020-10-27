@@ -38,7 +38,7 @@ public class Course
         modules = new ArrayList<Module>();
     }
     
-        /**
+       /**
      * Method for adding module to the course
      */
     public void addModule(Module newModule)
@@ -58,7 +58,7 @@ public class Course
         }
     }
     
-         /**
+        /**
      * Calculate the number of grade this student has accumulated.
      */
     public void addfinalGrade()
