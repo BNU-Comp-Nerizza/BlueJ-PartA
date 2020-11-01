@@ -46,7 +46,7 @@ public class StockManager
         {
             if (product.getID() == id)
             {
-                amount = quantity - amount;
+                quantity = quantity - amount;
             }
         }
     }
@@ -66,8 +66,10 @@ public class StockManager
 
     public void removeProduct(int id) 
     {
-        for(int i=0; i<stock.size(); i++) {
-            if(stock.get(i).getID() == id) {
+        for(int i=0; i<stock.size(); i++) 
+        {
+            if(stock.get(i).getID() == id) 
+            {
                 stock.remove(i);
             }
         }
