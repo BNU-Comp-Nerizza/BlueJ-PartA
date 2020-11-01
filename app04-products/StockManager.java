@@ -46,7 +46,8 @@ public class StockManager
         {
             if (product.getID() == id)
             {
-                quantity = quantity - amount;
+                product.increaseQuantity(amount);
+                product.printProductdetails();
             }
         }
     }
