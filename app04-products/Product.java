@@ -57,9 +57,17 @@ public class Product
     {
         return quantity;
     }
-
+    
     /**
      * @return The id, name and quantity in stock.
+     */
+    public String toString()
+    {
+        return id + ": " +  name + " stock level: " + quantity;
+    }
+
+    /**
+     * @Print The id, name and quantity in stock.
      */
     public void printProductdetails()
     {

@@ -42,7 +42,13 @@ public class StockManager
      */
     public void delivery(int id, int amount)
     {
-
+        for (Product product: stock)
+        {
+            if (product.getID() == id)
+            {
+                amount = quantity - amount;
+            }
+        }
     }
 
     /** Rename a product based on the ID
@@ -115,13 +121,16 @@ public class StockManager
     /**
      * Print details of all the products.
      */
-    public void printProductDetails()
+    public void printProduct()
     {
-        System.out.println("List of products: ");
+
         {
             for (Product product: stock)
             {
-                product.printProductdetails();
+                if(product != null)
+                {
+                    System.out.println(product.toString());
+                }
             }
         }
     }
@@ -129,11 +138,11 @@ public class StockManager
     /**
      * Print a list of products based on part of the product name
      */
-    public void printProductNameList(String name)
+    public void printProductName(String name)
     {
         for (Product product: stock)
         {
-            if(product.getName() == name)
+            if(product.getName().startsWith(name))
             {
                 product.printProductdetails();
             }
@@ -152,5 +161,24 @@ public class StockManager
                 product.printProductdetails();
             }
         }
+    }
+
+    /**
+     * Print out each product in the stock
+     * in the order they are in the stock list
+     */
+    public void printAllProducts()
+    {
+        System.out.println();
+        System.out.println("Peacock's Stock List");
+        System.out.println("====================");
+        System.out.println();
+
+        for(Product product : stock)
+        {
+            System.out.println(product);
+        }
+
+        System.out.println();
     }
 }
