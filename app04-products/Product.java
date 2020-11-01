@@ -1,8 +1,8 @@
 /**
  * Model some details of a product sold by a company.
  * 
- * @author David J. Barnes and Michael Kölling.
- * @version 2016.02.29
+ * @author Nerizza Flores
+ * @version 30/10/2020
  */
 public class Product
 {
@@ -43,6 +43,14 @@ public class Product
     }
 
     /**
+     * @set The product's name.
+     */
+    public void setName(String name)
+    {
+        this.name = name;
+    }
+
+    /**
      * @return The quantity in stock.
      */
     public int getQuantity()
@@ -53,9 +61,9 @@ public class Product
     /**
      * @return The id, name and quantity in stock.
      */
-    public String toString()
+    public void printProductdetails()
     {
-        return id + ": " +  name + " stock level: " + quantity;
+        System.out.println("Product ID: "+ id + ", Product Name: " +  name + ", stock level: " + quantity);
     }
 
     /**
@@ -73,7 +81,7 @@ public class Product
         else 
         {
             System.out.println("Attempt to restock " + name +
-                               " with a non-positive amount: " + amount);
+                " with a non-positive amount: " + amount);
         }
     }
 

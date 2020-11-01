@@ -1,16 +1,21 @@
 import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
 /**
  * Manage the stock in a business.
  * The stock is described by zero or more Products.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Nerizza Flores
+ * @version 30/10/2020
  */
 public class StockManager
 {
     // A list of the products.
     private ArrayList<Product> stock;
+    private Product product;
+    private int quantity;
+    private String name;
 
     /**
      * Initialise the stock manager.
@@ -28,7 +33,7 @@ public class StockManager
     {
         stock.add(item);
     }
-    
+
     /**
      * Receive a delivery of a particular product.
      * Increase the quantity of the product by the given amount.
@@ -37,18 +42,53 @@ public class StockManager
      */
     public void delivery(int id, int amount)
     {
+
     }
-    
+
+    /** Rename a product based on the ID
+     */
+    public void renameProduct(int id, String replaceName)
+    {
+        for (Product product: stock)
+        {
+            if (product.getID() == id)
+            {
+                product.setName(replaceName);
+            }
+        }
+    }
+
+    public void removeProduct(int id) 
+    {
+        for(int i=0; i<stock.size(); i++) {
+            if(stock.get(i).getID() == id) {
+                stock.remove(i);
+            }
+        }
+    }
+
     /**
      * Try to find a product in the stock with the given id.
      * @return The identified product, or null if there is none
      *         with a matching ID.
      */
     public Product findProduct(int id)
-    {
+    {       
+        for (Product product: stock)
+        {
+            if(product.getID() == id)
+            {
+                product.printProductdetails();
+                return product;
+            }
+            else if (product.getID() != id)
+            {
+                System.out.println("Product " + id + " is not on the list");
+            }
+        }
         return null;
     }
-    
+
     /**
      * Locate a product with the given ID, and return how
      * many of this item are in stock. If the ID does not
@@ -58,7 +98,18 @@ public class StockManager
      */
     public int numberInStock(int id)
     {
-        return 0;
+        for (Product product: stock)
+        {
+            if (product.getID() == id)
+            {
+                return quantity;
+            }
+            else if (product.getID() != id)
+            {
+                return 0;
+            }
+        }
+        return quantity;
     }
 
     /**
@@ -66,5 +117,40 @@ public class StockManager
      */
     public void printProductDetails()
     {
+        System.out.println("List of products: ");
+        {
+            for (Product product: stock)
+            {
+                product.printProductdetails();
+            }
+        }
+    }
+
+    /**
+     * Print a list of products based on part of the product name
+     */
+    public void printProductNameList(String name)
+    {
+        for (Product product: stock)
+        {
+            if(product.getName() == name)
+            {
+                product.printProductdetails();
+            }
+        }
+    }
+
+    /**
+     * Print a list of products whose stock levels are low
+     */
+    public void printLowStock()
+    {
+        for (Product product: stock)
+        {
+            if(product.getQuantity() <= 0)
+            {
+                product.printProductdetails();
+            }
+        }
     }
 }

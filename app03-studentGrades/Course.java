@@ -37,17 +37,17 @@ public class Course
         this.title= title;
         modules = new ArrayList<Module>();
     }
-    
-       /**
+
+    /**
      * Method for adding module to the course
      */
     public void addModule(Module newModule)
     {
-       modules.add(newModule);
-       System.out.println("Module (" + newModule.getmoduleTitle() + ") have been added.");
+        modules.add(newModule);
+        System.out.println("Module (" + newModule.getmoduleTitle() + ") have been added.");
     }
 
-     /**
+    /**
      * Calculate the number of credit points this student has accumulated.
      */
     public void addfinalCredits()
@@ -57,39 +57,39 @@ public class Course
             finalCredit = finalCredit + module.getCredits();
         }
     }
-    
-        /**
+
+    /**
      * Calculate the number of grade this student has accumulated.
      */
     public void addfinalGrade()
     {
         for (Module module : modules)
         {
-          mark = mark + module.getMark();
-          finalMark = mark / 4;
-        if (mark >= 0 && mark <= 39)
-        {
-            grade = 'F';
-        }
+            mark = mark + module.getMark();
+            finalMark = mark / 4;
+            if (mark >= 0 && mark <= 39)
+            {
+                grade = 'F';
+            }
             else if (mark >=40 && mark <= 49)
-           {
+            {
                 grade = 'D';
             }
-                else if (mark >=50 && mark <= 59)
-                {
-                    grade = 'C';
-                }
-                  else if (mark >=60 && mark <= 69)
-                  {
-                      grade = 'B';
-                    }
-                     else if (mark >=70 && mark <= 100)
-                     {
-                      grade = 'A';
-                      }
+            else if (mark >=50 && mark <= 59)
+            {
+                grade = 'C';
+            }
+            else if (mark >=60 && mark <= 69)
+            {
+                grade = 'B';
+            }
+            else if (mark >=70 && mark <= 100)
+            {
+                grade = 'A';
+            }
         }     
     }
-        
+
     /**
      * Return the code number of the course
      */
@@ -97,7 +97,7 @@ public class Course
     {
         return code;
     }
-         
+
     /**
      * Return the code number of the course
      */
@@ -105,23 +105,23 @@ public class Course
     {
         return grade;
     }
-    
-     /**
+
+    /**
      * Return the final credits of the student
      */
     public int getFinalCredits()
     {
         return finalCredit;
     }
-    
-     /**
+
+    /**
      * Return the final mark of the student
      */
     public int getFinalMark()
     {
         return finalMark;
     }
-    
+
     /**
      * Return the title of the course
      */
@@ -129,18 +129,18 @@ public class Course
     {
         return title;
     }
-    
+
     /**
      * print out the course details and its module
      */
-     public void printCourse()
+    public void printCourse()
     {
         System.out.println("course code: " + code + ", course title: " + title);
         System.out.println("List of the modules: " );
         {
-         for (Module module : modules)
-         {
-             module.printModule();
+            for (Module module : modules)
+            {
+                module.printModule();
             }   
         }
     }

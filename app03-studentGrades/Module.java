@@ -26,7 +26,7 @@ public class Module
         credits = 0;
         mark = 0;
     }   
-    
+
     /**
      * Method for awarding mark to a module 
      * 
@@ -35,7 +35,7 @@ public class Module
     {
         if((mark >= 0) && (mark <= 100))
         {
-        this.mark = mark;
+            this.mark = mark;
         }
         else 
         {
@@ -44,7 +44,7 @@ public class Module
         //after adding mark it will automatically convert mark to credits
         addCredits();
     }
-    
+
     /**
      * Method for calculating credits 
      */
@@ -60,23 +60,23 @@ public class Module
             System.out.println("Not enough credits for this module");
         }
     }
-    
+
     /**
      * Return the credits of the module
      */
     public int getCredits()
     {
-       return credits;
+        return credits;
     }
-    
+
     /**
      * Return the mark of the module
      */
     public int getMark()
     {
-       return mark;
+        return mark;
     }
-    
+
     /**
      * Return the code number of the module
      */
@@ -84,7 +84,7 @@ public class Module
     {
         return code;
     }
-    
+
     /**
      * Return the title of the module
      */
@@ -92,8 +92,8 @@ public class Module
     {
         return title;
     }
-    
-      /**
+
+    /**
      * Prints out the details for the module
      */
     public void printModule()

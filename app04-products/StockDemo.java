@@ -3,8 +3,8 @@
  * The demonstration becomes properly functional as
  * the StockManager class is completed.
  * 
- * @author David J. Barnes and Michael Kölling.
- * @version 2016.02.29
+ * @author Nerizza Flores
+ * @version 30/10/2020
  */
 public class StockDemo
 {
@@ -21,8 +21,15 @@ public class StockDemo
         manager.addProduct(new Product(132, "Clock Radio"));
         manager.addProduct(new Product(37,  "Mobile Phone"));
         manager.addProduct(new Product(23,  "Microwave Oven"));
+        manager.addProduct(new Product(21, "TV"));
+        manager.addProduct(new Product(20, "Speaker"));
+        manager.addProduct(new Product(22, "Printer"));
+        manager.addProduct(new Product(24, "Headphone"));
+        manager.addProduct(new Product(25, "Tissue"));
+        manager.addProduct(new Product(26, "Keyboard"));
+        manager.addProduct(new Product(27, "Facemask"));
     }
-    
+
     /**
      * Provide a very simple demonstration of how a StockManager
      * might be used. Details of one product are shown, the
@@ -36,7 +43,7 @@ public class StockDemo
         manager.delivery(132, 5);
         manager.printProductDetails();
     }
-    
+
     /**
      * Show details of the given product. If found,
      * its name and stock quantity will be shown.
@@ -45,13 +52,13 @@ public class StockDemo
     public void showDetails(int id)
     {
         Product product = getProduct(id);
-        
+
         if(product != null) 
         {
-            System.out.println(product.toString());
+            product.printProductdetails();
         }
     }
-    
+
     /**
      * Sell one of the given item.
      * Show the before and after status of the product.
@@ -60,7 +67,7 @@ public class StockDemo
     public void sellProduct(int id)
     {
         Product product = getProduct(id);
-        
+
         if(product != null) 
         {
             showDetails(id);
@@ -68,7 +75,7 @@ public class StockDemo
             showDetails(id);
         }
     }
-    
+
     /**
      * Get the product with the given id from the manager.
      * An error message is printed if there is no match.
@@ -78,11 +85,11 @@ public class StockDemo
     public Product getProduct(int id)
     {
         Product product = manager.findProduct(id);
-        
+
         if(product == null) 
         {
             System.out.println("Product with ID: " + id +
-                               " is not recognised.");
+                " is not recognised.");
         }
         return product;
     }
