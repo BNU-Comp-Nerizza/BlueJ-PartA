@@ -62,9 +62,15 @@ public class StockManager
             {
                 product.setName(replaceName);
             }
+            else if (product.getID() != id)
+            {
+                System.out.println("Product " + id + " is not on the list");
+            }
         }
     }
 
+    /** Remove a product based on the ID
+     */
     public void removeProduct(int id) 
     {
         for(int i=0; i<stock.size(); i++) 
@@ -72,6 +78,10 @@ public class StockManager
             if(stock.get(i).getID() == id) 
             {
                 stock.remove(i);
+            }
+            else if (stock.get(i).getID() != id)
+            {
+                System.out.println("Product " + id + " is not on the list");
             }
         }
     }
@@ -124,24 +134,27 @@ public class StockManager
     /**
      * Print details of all the products.
      */
-    public void printProduct()
+    public void printAllProduct()
     {
+        System.out.println();
+        System.out.println("Peacock's Stock List");
+        System.out.println("====================");
+        System.out.println();
 
+        for (Product product: stock)
         {
-            for (Product product: stock)
+            if(product != null)
             {
-                if(product != null)
-                {
-                    System.out.println(product.toString());
-                }
+                System.out.println(product.toString());
             }
         }
+
     }
 
     /**
      * Print a list of products based on part of the product name
      */
-    public void printProductName(String name)
+    public void findProductName(String name)
     {
         for (Product product: stock)
         {
@@ -155,33 +168,14 @@ public class StockManager
     /**
      * Print a list of products whose stock levels are low
      */
-    public void printLowStock()
+    public void findLowStock()
     {
         for (Product product: stock)
         {
-            if(product.getQuantity() <= 0)
+            if(product.getQuantity() <= 5)
             {
                 product.printProductdetails();
             }
         }
-    }
-
-    /**
-     * Print out each product in the stock
-     * in the order they are in the stock list
-     */
-    public void printAllProducts()
-    {
-        System.out.println();
-        System.out.println("Peacock's Stock List");
-        System.out.println("====================");
-        System.out.println();
-
-        for(Product product : stock)
-        {
-            System.out.println(product);
-        }
-
-        System.out.println();
     }
 }

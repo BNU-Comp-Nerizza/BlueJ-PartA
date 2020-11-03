@@ -38,10 +38,21 @@ public class StockDemo
     public void demo()
     {
         // Show details of all of the products.
-        manager.printProduct();
+        manager.printAllProduct();
+
         // Take delivery of 5 items of one of the products.
-        manager.delivery(132, 5);
-        manager.printProduct();
+        manager.delivery(132, 10);
+        manager.delivery(37, 5);
+        manager.delivery(23, 23);
+        manager.delivery(21, 30);
+        manager.delivery(20, 15);
+        manager.delivery(22, 7);
+        manager.delivery(24, 28);
+        manager.delivery(25, 32);
+        manager.delivery(26, 12);
+        manager.delivery(27, 50);
+
+        manager.printAllProduct();
     }
 
     /**
@@ -101,23 +112,5 @@ public class StockDemo
     {
         return manager;
     }
-    
-        /**
-     * Provide a very simple demonstration of how a StockManager
-     * might be used. Details of one product are shown, the
-     * product is restocked, and then the details are shown again.
-     */
-    public void demoDeliverProduct()
-    {
-        // Show details of all of the products before delivery.
-        manager.printProduct();
-        
-        // Take delivery of 5 items of one of the products.
-        manager.delivery(101, 5);
-        
-        // Show the list of all products after delivery
-        manager.printProduct();
-    }
 
-    
 }
