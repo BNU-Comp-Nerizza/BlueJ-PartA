@@ -35,7 +35,7 @@ public class StockDemo
      * might be used. Details of one product are shown, the
      * product is restocked, and then the details are shown again.
      */
-    public void demo()
+    public void demoDeliverProduct()
     {
         // Show details of all of the products.
         manager.printAllProduct();

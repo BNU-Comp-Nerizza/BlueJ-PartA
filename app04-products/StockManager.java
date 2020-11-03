@@ -131,6 +131,21 @@ public class StockManager
         return quantity;
     }
 
+        /**
+     * Print details of the given product. If found,
+     * its name and stock quantity will be shown.
+     * @param id The ID of the product to look for.
+     */
+    public void printProduct(int id)
+    {
+        Product product = findProduct(id);
+        
+        if(product != null) 
+        {
+            System.out.println(product.toString());
+        }
+    }
+    
     /**
      * Print details of all the products.
      */
