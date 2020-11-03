@@ -1,0 +1,73 @@
+StockManager stock = new StockManager();
+StockDemo demo = new StockDemo();
+demo.demoDeliverProduct();
+
+Peacock's Stock List
+====================
+
+132: Clock Radio stock level: 0
+37: Mobile Phone stock level: 0
+23: Microwave Oven stock level: 0
+21: TV stock level: 0
+20: Speaker stock level: 0
+22: Printer stock level: 0
+24: Headphone stock level: 0
+25: Tissue stock level: 0
+26: Keyboard stock level: 0
+27: Facemask stock level: 0
+Product ID: 132, Product Name: Clock Radio, stock level: 10
+Product ID: 37, Product Name: Mobile Phone, stock level: 5
+Product ID: 23, Product Name: Microwave Oven, stock level: 23
+Product ID: 21, Product Name: TV, stock level: 30
+Product ID: 20, Product Name: Speaker, stock level: 15
+Product ID: 22, Product Name: Printer, stock level: 7
+Product ID: 24, Product Name: Headphone, stock level: 28
+Product ID: 25, Product Name: Tissue, stock level: 32
+Product ID: 26, Product Name: Keyboard, stock level: 12
+Product ID: 27, Product Name: Facemask, stock level: 50
+
+Peacock's Stock List
+====================
+
+132: Clock Radio stock level: 10
+37: Mobile Phone stock level: 5
+23: Microwave Oven stock level: 23
+21: TV stock level: 30
+20: Speaker stock level: 15
+22: Printer stock level: 7
+24: Headphone stock level: 28
+25: Tissue stock level: 32
+26: Keyboard stock level: 12
+27: Facemask stock level: 50
+demo.sellProduct(132);
+Product ID: 132, Product Name: Clock Radio, stock level: 10
+Product ID: 132, Product Name: Clock Radio, stock level: 9
+demo.sellProduct(37);
+Product ID: 37, Product Name: Mobile Phone, stock level: 5
+Product ID: 37, Product Name: Mobile Phone, stock level: 4
+demo.sellProduct(23);
+Product ID: 23, Product Name: Microwave Oven, stock level: 23
+Product ID: 23, Product Name: Microwave Oven, stock level: 22
+demo.sellProduct(21);
+Product ID: 21, Product Name: TV, stock level: 309
+Product ID: 21, Product Name: TV, stock level: 29
+demo.sellProduct(20);
+Product ID: 20, Product Name: Speaker, stock level: 15
+Product ID: 20, Product Name: Speaker, stock level: 14
+demo.sellProduct(22);
+Product ID: 22, Product Name: Printer, stock level: 7
+Product ID: 22, Product Name: Printer, stock level: 6
+demo.sellProduct(24);
+Product ID: 24, Product Name: Headphone, stock level: 28
+Product ID: 24, Product Name: Headphone, stock level: 27
+demo.sellProduct(25);
+Product ID: 25, Product Name: Tissue, stock level: 32
+Product ID: 25, Product Name: Tissue, stock level: 31
+demo.sellProduct(26);
+Product ID: 26, Product Name: Keyboard, stock level: 12
+Product ID: 26, Product Name: Keyboard, stock level: 11
+demo.sellProduct(27);
+Product ID: 27, Product Name: Facemask, stock level: 50
+Product ID: 27, Product Name: Facemask, stock level: 49
+demo.sellProduct(99);
+Product with ID: 99 is not recognised.
