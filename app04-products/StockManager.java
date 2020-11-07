@@ -42,12 +42,16 @@ public class StockManager
      */
     public void delivery(int id, int amount)
     {
-        for (Product product: stock)
+        Product product = findProduct(id);
         {
-            if (product.getID() == id)
+            if (product != null)
             {
                 product.increaseQuantity(amount);
                 product.printProductdetails();
+            }
+            else 
+            {
+                System.out.println("Product " + id + " is not on the list");
             }
         }
     }
@@ -56,13 +60,14 @@ public class StockManager
      */
     public void renameProduct(int id, String replaceName)
     {
-        for (Product product: stock)
+        Product product = findProduct(id);
+
         {
-            if (product.getID() == id)
+            if(product != null) 
             {
                 product.setName(replaceName);
             }
-            else if (product.getID() != id)
+            else 
             {
                 System.out.println("Product " + id + " is not on the list");
             }
@@ -100,10 +105,6 @@ public class StockManager
                 product.printProductdetails();
                 return product;
             }
-            else if (product.getID() != id)
-            {
-                System.out.println("Product " + id + " is not on the list");
-            }
         }
         return null;
     }
@@ -117,16 +118,15 @@ public class StockManager
      */
     public int numberInStock(int id)
     {
-        for (Product product: stock)
+        Product product = findProduct(id);
+
+        if(product != null) 
         {
-            if (product.getID() == id)
-            {
-                return quantity;
-            }
-            else if (product.getID() != id)
-            {
-                return 0;
-            }
+            return quantity;
+        } 
+        else
+        {
+            System.out.println("Product " + id + " is not on the list");
         }
         return quantity;
     }
