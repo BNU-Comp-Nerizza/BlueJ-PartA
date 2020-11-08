@@ -1,9 +1,8 @@
-
 /**
- * Write a description of class Course here.
+ * It holds the course details relevant in our context.
  *
- * @Nerizza Flores
- * @30/09/2020
+ * @author Nerizza Flores
+ * @version 30/SEP/2020
  */
 public class Course
 {
@@ -21,29 +20,20 @@ public class Course
         codeNum= code;
         courseTitle= title;
     }
-    
-     /**
+
+    /**
      * Return the code number of the course
      */
     public String getcodeNum()
     {
         return codeNum;
     }
-    
-     /**
+
+    /**
      * Return the title of the course
      */
     public String getcourseTitle()
     {
         return courseTitle;
     }
-    
-         /**
-     * print out the course
-     */
-    public void printCourse()
-    {
-        System.out.println("course code: " + codeNum + ", course title: " + courseTitle);
-    }
-    
 }

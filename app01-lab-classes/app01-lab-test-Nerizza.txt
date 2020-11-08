@@ -1,28 +1,48 @@
 LabClass co452Lab = new LabClass(3);
 co452Lab.setInstructor("Nicholas Day");
 co452Lab.setRoom("G100");
-co452Lab.setTime("Wednesday, 30th September 2020, 10 am");
-Course Cybersecurity = new Course("CY132", "BSc (Hon) Cybersecurity");
-Student Queen = new Student("Queen Bucks", "21345342", Cybersecurity);
-Student King = new Student("King Bucks", "234123456", Cybersecurity);
-Student Princess = new Student("Princess Mitten", "31245235", Cybersecurity);
-Queen.addCredits(20);
-King.addCredits(20);
-Princess.addCredits(20);
-Queen.changeName("Queen");
-King.changeName("King");
-Princess.changeName("Princess");
-co452Lab.enrollStudent(Queen);
-co452Lab.enrollStudent(King);
-co452Lab.enrollStudent(Princess);
+co452Lab.setTime("Tuesday 29th September 2020, 10am");
+Student Keith = new Student("Keith Salazar", "10928492");
+Student Reina = new Student("Reina Faulkerson", "10937484");
+Student Arston = new Student("Arston Ian", "10983672");
+Keith.addCredits(20);
+Reina.addCredits(20);
+Arston.addCredits(20);
+Keith.changeName("Keith");
+Reina.changeName("Reina");
+Arston.changeName("Arston");
+Course Cybersecurity = new Course("CY100", "BSc (Hons) Cybersecurity");
+Keith.enroll(Cybersecurity);
+Reina.enroll(Cybersecurity);
+Arston.enroll(Cybersecurity);
+Keith.getCredits()
+    returned int 20
+Reina.getCredits()
+    returned int 20
+Arston.getCredits()
+    returned int 20
+Keith.print();
+Student name: Keith, Student ID: 10928492, Credits: 20
+Course code: CY100, Course title: BSc (Hons) Cybersecurity
+Reina.print();
+Student name: Reina, Student ID: 10937484, Credits: 20
+Course code: CY100, Course title: BSc (Hons) Cybersecurity
+Arston.print();
+Student name: Arston, Student ID: 10983672, Credits: 20
+Course code: CY100, Course title: BSc (Hons) Cybersecurity
+co452Lab.enrollStudent(Keith);
+co452Lab.enrollStudent(Reina);
+co452Lab.enrollStudent(Arston);
+co452Lab.numberOfStudents()
+    returned int 3
 co452Lab.printList();
-Lab class Wednesday, 30th September 2020, 10 am
+Lab class Tuesday 29th September 2020, 10am
 Instructor: Nicholas Day   Room: G100
 Class list:
-Queen, student ID: 21345342, credits: 20
-course code: CY132, course title: BSc (Hon) Cybersecurity
-King, student ID: 234123456, credits: 20
-course code: CY132, course title: BSc (Hon) Cybersecurity
-Princess, student ID: 31245235, credits: 20
-course code: CY132, course title: BSc (Hon) Cybersecurity
+Student name: Keith, Student ID: 10928492, Credits: 20
+Course code: CY100, Course title: BSc (Hons) Cybersecurity
+Student name: Reina, Student ID: 10937484, Credits: 20
+Course code: CY100, Course title: BSc (Hons) Cybersecurity
+Student name: Arston, Student ID: 10983672, Credits: 20
+Course code: CY100, Course title: BSc (Hons) Cybersecurity
 Number of students: 3
