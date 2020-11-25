@@ -1,4 +1,3 @@
-
 import java.util.ArrayList;
 import java.util.*;
 /**
@@ -32,7 +31,6 @@ public class StockApp
     public StockApp()
     {
         input = new InputReader();
-        StockManager manager = new StockManager();
     }
 
     /**
@@ -98,6 +96,86 @@ public class StockApp
     }
 
     /**
+     * Execute the add method. Add a new product with ID and name of the product. 
+     */
+    private void executeAdd(){ 
+        System.out.println("[Adding Products]"); 
+        System.out.println("Please input the id of the product"); 
+        String value = input.getString(); 
+        int id = Integer.parseInt(value);
+        if(manager.findProduct(id) != null) 
+        {
+            System.out.println("Duplicate id entered"); 
+            System.out.println("Try Again"); 
+        } 
+        else 
+        {
+            System.out.println("Please input the name of the product");     
+            String name = input.getString(); 
+            Product product = new Product(id, name); 
+            manager.addProduct(product); 
+            System.out.println("Product " + product.getID() + ", " + product.getName()  + " has been added");
+        }
+    }
+
+    /**
+     * Execute the remove method. Remove a product based on the ID.
+     */
+    private void executeRemove(){
+        System.out.println("[Removing Products]");
+        System.out.println("Please input the id of the product you want to remove");
+        String value = input.getString();
+        int id = Integer.parseInt(value);
+        manager.removeProduct(id);
+    }
+
+    /**
+     * Execute the delivery method. 
+     * Receive a delivery of a particular product.
+     * Increase the quantity of the product by the given amount.
+     */
+    private void executeDeliver(){
+        System.out.println("[Deliver Products]");
+        System.out.println("Please input the ID of the product you want to deliver");
+        String value = input.getString();
+        int id = Integer.parseInt(value);
+
+        System.out.println("Please input the amount to deliver");
+        String quantity = input.getString();
+        int amount = Integer.parseInt(quantity);
+
+        manager.delivery(id, amount);
+    }
+
+    /**
+     * Execute the search method. 
+     * Search a product based on their name and print the list. 
+     */
+    private void executeSearch(){
+        System.out.println("[Search for Products]");
+        System.out.println("Please input the name of the product you want to search");
+        String name = input.getString();
+        manager.findProductName(name);
+    }
+
+    /**
+     * Execute the search method. 
+     * Search a product based on their name and print the list. 
+     */
+    private void executeSell(){
+        System.out.println("[Selling Products]");
+        System.out.println("Please input the ID of the product you want to sell");
+        String value = input.getString();
+        int id = Integer.parseInt(value);
+
+        System.out.println("Please input the amount to sell");
+        String quantity = input.getString();
+        int sell = Integer.parseInt(quantity);
+
+        manager.sell(id, sell);
+    }
+
+    /**
      * Print out a menu of operation choices
      */
     private void printMenuChoices()
@@ -126,79 +204,4 @@ public class StockApp
         System.out.println("******************************");
     }
 
-    /**
-     * Execute the add method. Add a new product with ID and name of the product. 
-     */
-    private void executeAdd(){ 
-        System.out.println("Please input the id of the product"); 
-        String value = input.getString(); 
-        int id = Integer.parseInt(value);
-
-        if(manager.findProduct(id) != null) 
-        {
-            System.out.println("Duplicate id entered"); 
-            System.out.println("Try Again"); 
-        } 
-        else 
-        {
-            System.out.println("Please input the name of the product");     
-            String name = input.getString(); 
-            Product product = new Product(id, name); 
-            manager.addProduct(product); 
-            System.out.println("Product " + product.getID() + ", " + product.getName()  + " has been added");
-        }
-    }
-
-    /**
-     * Execute the remove method. Remove a product based on the ID.
-     */
-    private void executeRemove(){
-        System.out.println("Please input the id of the product you want to remove");
-        String value = input.getString();
-        int id = Integer.parseInt(value);
-        manager.removeProduct(id);
-    }
-
-    /**
-     * Execute the delivery method. 
-     * Receive a delivery of a particular product.
-     * Increase the quantity of the product by the given amount.
-     */
-    private void executeDeliver(){
-        System.out.println("Please input the ID of the product you want to deliver");
-        String value = input.getString();
-        int id = Integer.parseInt(value);
-
-        System.out.println("Please input the amount to deliver");
-        String quantity = input.getString();
-        int amount = Integer.parseInt(quantity);
-
-        manager.delivery(id, amount);
-    }
-
-    /**
-     * Execute the search method. 
-     * Search a product based on their name and print the list. 
-     */
-    private void executeSearch(){
-        System.out.println("Please input the name of the product you want to search");
-        String name = input.getString();
-        manager.findProductName(name);
-    }
-
-    /**
-     * Execute the search method. 
-     * Search a product based on their name and print the list. 
-     */
-    private void executeSell(){
-        System.out.println("Please input the ID of the product you want to sell");
-        String value = input.getString();
-        int id = Integer.parseInt(value);
-
-        System.out.println("Please input the amount to sell");
-        String quantity = input.getString();
-        int sell = Integer.parseInt(quantity);
-
-        manager.sell(id, sell);
-    }
 }

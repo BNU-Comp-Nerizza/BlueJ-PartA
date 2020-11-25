@@ -14,14 +14,17 @@
     Quit:       Quit the program
 
 > Remove
+[Removing Products]
 Please input the id of the product you want to remove
 > 113
 Product 113: Apple iPhone 11 stock level: 0 have been successfully removed
+
 ******************************
  Stock Management Application 
     App05: by Nerizza Flores
 ******************************
 
+    Add:        Add a new product
     Remove:     Remove an old product
     Deliver:    Deliver a quantity of product
     Sell:       Sell a quantity of product
@@ -32,9 +35,11 @@ Product 113: Apple iPhone 11 stock level: 0 have been successfully removed
     Quit:       Quit the program
 
 > Remove
+[Removing Products]
 Please input the id of the product you want to remove
 > 203
 Product 203 is not on the list
+
 ******************************
  Stock Management Application 
     App05: by Nerizza Flores
@@ -59,7 +64,8 @@ Peacock's Stock List
 112: Samsung Galaxy S20 stock level: 0
 114: Apple iPhone 12 stock level: 0
 115: Motorola G9 Plus stock level: 0
-116: Oppo R20 stock level: 0
+116: Oppo P20 stock level: 0
+
 ******************************
  Stock Management Application 
     App05: by Nerizza Flores
@@ -76,11 +82,13 @@ Peacock's Stock List
     Quit:       Quit the program
 
 > Deliver
+[Deliver Products]
 Please input the ID of the product you want to deliver
 > 112
 Please input the amount to deliver
 > 8
 Product ID: 112, Product Name: Samsung Galaxy S20, stock level: 8
+
 ******************************
  Stock Management Application 
     App05: by Nerizza Flores
@@ -97,12 +105,14 @@ Product ID: 112, Product Name: Samsung Galaxy S20, stock level: 8
     Quit:       Quit the program
 
 > Deliver
+[Deliver Products]
 Please input the ID of the product you want to deliver
 > 112
 Please input the amount to deliver
 > -4
 Attempt to restock Samsung Galaxy S20 with a non-positive amount: -4
 Product ID: 112, Product Name: Samsung Galaxy S20, stock level: 8
+
 ******************************
  Stock Management Application 
     App05: by Nerizza Flores
@@ -119,11 +129,13 @@ Product ID: 112, Product Name: Samsung Galaxy S20, stock level: 8
     Quit:       Quit the program
 
 > Sell
+[Selling Products]
 Please input the ID of the product you want to sell
 > 112
 Please input the amount to sell
 > 2
 2 is sold
+
 ******************************
  Stock Management Application 
     App05: by Nerizza Flores
@@ -140,11 +152,13 @@ Please input the amount to sell
     Quit:       Quit the program
 
 > Sell
+[Selling Products]
 Please input the ID of the product you want to sell
 > 112
 Please input the amount to sell
 > 10
 Attempt to sell an out of stock item: Samsung Galaxy S20
+
 ******************************
  Stock Management Application 
     App05: by Nerizza Flores
@@ -161,11 +175,13 @@ Attempt to sell an out of stock item: Samsung Galaxy S20
     Quit:       Quit the program
 
 > Sell
+[Selling Products]
 Please input the ID of the product you want to sell
 > 112
 Please input the amount to sell
 > -2
 The amount must be a positive number!
+
 ******************************
  Stock Management Application 
     App05: by Nerizza Flores
@@ -182,10 +198,12 @@ The amount must be a positive number!
     Quit:       Quit the program
 
 > Search
+[Search for Products]
 Please input the name of the product you want to search
 > Samsung
 Product ID: 111, Product Name: Samsung Galaxy S10, stock level: 0
 Product ID: 112, Product Name: Samsung Galaxy S20, stock level: 6
+
 ******************************
  Stock Management Application 
     App05: by Nerizza Flores
@@ -201,11 +219,12 @@ Product ID: 112, Product Name: Samsung Galaxy S20, stock level: 6
     Re-Stock:   All the low stock items
     Quit:       Quit the program
 
-> Lowstock
+> LowStock
 Product ID: 111, Product Name: Samsung Galaxy S10, stock level: 0
 Product ID: 114, Product Name: Apple iPhone 12, stock level: 0
 Product ID: 115, Product Name: Motorola G9 Plus, stock level: 0
-Product ID: 116, Product Name: Oppo R20, stock level: 0
+Product ID: 116, Product Name: Oppo P20, stock level: 0
+
 ******************************
  Stock Management Application 
     App05: by Nerizza Flores
@@ -221,4 +240,4 @@ Product ID: 116, Product Name: Oppo R20, stock level: 0
     Re-Stock:   All the low stock items
     Quit:       Quit the program
 
-> 
+> Quit

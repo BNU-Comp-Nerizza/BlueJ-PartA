@@ -1,13 +1,8 @@
-Quit
 Program.main();
 ******************************
  Stock Management Application 
     App05: by Nerizza Flores
 ******************************
-******************************
- Stock Management Application 
-    App05: by Nerizza Flores
-******************************
 
     Add:        Add a new product
     Remove:     Remove an old product
@@ -20,11 +15,13 @@ Program.main();
     Quit:       Quit the program
 
 > Add
+[Adding Products]
 Please input the id of the product
 > 111
 Please input the name of the product
 > Samsung Galaxy S10
-Product 111: Samsung Galaxy S10 stock level: 0 has been added
+Product 111, Samsung Galaxy S10 has been added
+
 ******************************
  Stock Management Application 
     App05: by Nerizza Flores
@@ -41,11 +38,13 @@ Product 111: Samsung Galaxy S10 stock level: 0 has been added
     Quit:       Quit the program
 
 > Add
+[Adding Products]
 Please input the id of the product
 > 112
 Please input the name of the product
 > Samsung Galaxy S20
-Product 112: Samsung Galaxy S20 stock level: 0 has been added
+Product 112, Samsung Galaxy S20 has been added
+
 ******************************
  Stock Management Application 
     App05: by Nerizza Flores
@@ -62,11 +61,13 @@ Product 112: Samsung Galaxy S20 stock level: 0 has been added
     Quit:       Quit the program
 
 > Add
+[Adding Products]
 Please input the id of the product
 > 113
 Please input the name of the product
 > Apple iPhone 11
-Product 113: Apple iPhone 11 stock level: 0 has been added
+Product 113, Apple iPhone 11 has been added
+
 ******************************
  Stock Management Application 
     App05: by Nerizza Flores
@@ -83,11 +84,13 @@ Product 113: Apple iPhone 11 stock level: 0 has been added
     Quit:       Quit the program
 
 > Add
+[Adding Products]
 Please input the id of the product
 > 114
 Please input the name of the product
 > Apple iPhone 12
-Product 114: Apple iPhone 12 stock level: 0 has been added
+Product 114, Apple iPhone 12 has been added
+
 ******************************
  Stock Management Application 
     App05: by Nerizza Flores
@@ -104,11 +107,13 @@ Product 114: Apple iPhone 12 stock level: 0 has been added
     Quit:       Quit the program
 
 > Add
+[Adding Products]
 Please input the id of the product
 > 115
 Please input the name of the product
 > Motorola G9 Plus
-Product 115: Motorola G9 Plus stock level: 0 has been added
+Product 115, Motorola G9 Plus has been added
+
 ******************************
  Stock Management Application 
     App05: by Nerizza Flores
@@ -125,12 +130,12 @@ Product 115: Motorola G9 Plus stock level: 0 has been added
     Quit:       Quit the program
 
 > Add
+[Adding Products]
 Please input the id of the product
 > 113
-Please input the name of the product
-> Logicool Headphone
 Duplicate id entered
 Try Again
+
 ******************************
  Stock Management Application 
     App05: by Nerizza Flores
@@ -147,27 +152,12 @@ Try Again
     Quit:       Quit the program
 
 > Add
+[Adding Products]
 Please input the id of the product
 > 116
 Please input the name of the product
 > 
 Invalid input. Cannot leave blank
 
-> Oppo R20
-Product 116: Oppo R20 stock level: 0 has been added
-******************************
- Stock Management Application 
-    App05: by Nerizza Flores
-******************************
-
-    Add:        Add a new product
-    Remove:     Remove an old product
-    Deliver:    Deliver a quantity of product
-    Sell:       Sell a quantity of product
-    PrintAll:   Print all products
-    Search:     For product by name
-    Low Stock:  List all low stock products
-    Re-Stock:   All the low stock items
-    Quit:       Quit the program
-
-> 
+> Oppo P20
+Product 116, Oppo P20 has been added
