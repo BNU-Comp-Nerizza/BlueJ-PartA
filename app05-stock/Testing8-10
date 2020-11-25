@@ -1,0 +1,224 @@
+******************************
+ Stock Management Application 
+    App05: by Nerizza Flores
+******************************
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    Deliver:    Deliver a quantity of product
+    Sell:       Sell a quantity of product
+    PrintAll:   Print all products
+    Search:     For product by name
+    Low Stock:  List all low stock products
+    Re-Stock:   All the low stock items
+    Quit:       Quit the program
+
+> Remove
+Please input the id of the product you want to remove
+> 113
+Product 113: Apple iPhone 11 stock level: 0 have been successfully removed
+******************************
+ Stock Management Application 
+    App05: by Nerizza Flores
+******************************
+
+    Remove:     Remove an old product
+    Deliver:    Deliver a quantity of product
+    Sell:       Sell a quantity of product
+    PrintAll:   Print all products
+    Search:     For product by name
+    Low Stock:  List all low stock products
+    Re-Stock:   All the low stock items
+    Quit:       Quit the program
+
+> Remove
+Please input the id of the product you want to remove
+> 203
+Product 203 is not on the list
+******************************
+ Stock Management Application 
+    App05: by Nerizza Flores
+******************************
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    Deliver:    Deliver a quantity of product
+    Sell:       Sell a quantity of product
+    PrintAll:   Print all products
+    Search:     For product by name
+    Low Stock:  List all low stock products
+    Re-Stock:   All the low stock items
+    Quit:       Quit the program
+
+> Printall
+
+Peacock's Stock List
+====================
+
+111: Samsung Galaxy S10 stock level: 0
+112: Samsung Galaxy S20 stock level: 0
+114: Apple iPhone 12 stock level: 0
+115: Motorola G9 Plus stock level: 0
+116: Oppo R20 stock level: 0
+******************************
+ Stock Management Application 
+    App05: by Nerizza Flores
+******************************
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    Deliver:    Deliver a quantity of product
+    Sell:       Sell a quantity of product
+    PrintAll:   Print all products
+    Search:     For product by name
+    Low Stock:  List all low stock products
+    Re-Stock:   All the low stock items
+    Quit:       Quit the program
+
+> Deliver
+Please input the ID of the product you want to deliver
+> 112
+Please input the amount to deliver
+> 8
+Product ID: 112, Product Name: Samsung Galaxy S20, stock level: 8
+******************************
+ Stock Management Application 
+    App05: by Nerizza Flores
+******************************
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    Deliver:    Deliver a quantity of product
+    Sell:       Sell a quantity of product
+    PrintAll:   Print all products
+    Search:     For product by name
+    Low Stock:  List all low stock products
+    Re-Stock:   All the low stock items
+    Quit:       Quit the program
+
+> Deliver
+Please input the ID of the product you want to deliver
+> 112
+Please input the amount to deliver
+> -4
+Attempt to restock Samsung Galaxy S20 with a non-positive amount: -4
+Product ID: 112, Product Name: Samsung Galaxy S20, stock level: 8
+******************************
+ Stock Management Application 
+    App05: by Nerizza Flores
+******************************
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    Deliver:    Deliver a quantity of product
+    Sell:       Sell a quantity of product
+    PrintAll:   Print all products
+    Search:     For product by name
+    Low Stock:  List all low stock products
+    Re-Stock:   All the low stock items
+    Quit:       Quit the program
+
+> Sell
+Please input the ID of the product you want to sell
+> 112
+Please input the amount to sell
+> 2
+2 is sold
+******************************
+ Stock Management Application 
+    App05: by Nerizza Flores
+******************************
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    Deliver:    Deliver a quantity of product
+    Sell:       Sell a quantity of product
+    PrintAll:   Print all products
+    Search:     For product by name
+    Low Stock:  List all low stock products
+    Re-Stock:   All the low stock items
+    Quit:       Quit the program
+
+> Sell
+Please input the ID of the product you want to sell
+> 112
+Please input the amount to sell
+> 10
+Attempt to sell an out of stock item: Samsung Galaxy S20
+******************************
+ Stock Management Application 
+    App05: by Nerizza Flores
+******************************
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    Deliver:    Deliver a quantity of product
+    Sell:       Sell a quantity of product
+    PrintAll:   Print all products
+    Search:     For product by name
+    Low Stock:  List all low stock products
+    Re-Stock:   All the low stock items
+    Quit:       Quit the program
+
+> Sell
+Please input the ID of the product you want to sell
+> 112
+Please input the amount to sell
+> -2
+The amount must be a positive number!
+******************************
+ Stock Management Application 
+    App05: by Nerizza Flores
+******************************
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    Deliver:    Deliver a quantity of product
+    Sell:       Sell a quantity of product
+    PrintAll:   Print all products
+    Search:     For product by name
+    Low Stock:  List all low stock products
+    Re-Stock:   All the low stock items
+    Quit:       Quit the program
+
+> Search
+Please input the name of the product you want to search
+> Samsung
+Product ID: 111, Product Name: Samsung Galaxy S10, stock level: 0
+Product ID: 112, Product Name: Samsung Galaxy S20, stock level: 6
+******************************
+ Stock Management Application 
+    App05: by Nerizza Flores
+******************************
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    Deliver:    Deliver a quantity of product
+    Sell:       Sell a quantity of product
+    PrintAll:   Print all products
+    Search:     For product by name
+    Low Stock:  List all low stock products
+    Re-Stock:   All the low stock items
+    Quit:       Quit the program
+
+> Lowstock
+Product ID: 111, Product Name: Samsung Galaxy S10, stock level: 0
+Product ID: 114, Product Name: Apple iPhone 12, stock level: 0
+Product ID: 115, Product Name: Motorola G9 Plus, stock level: 0
+Product ID: 116, Product Name: Oppo R20, stock level: 0
+******************************
+ Stock Management Application 
+    App05: by Nerizza Flores
+******************************
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    Deliver:    Deliver a quantity of product
+    Sell:       Sell a quantity of product
+    PrintAll:   Print all products
+    Search:     For product by name
+    Low Stock:  List all low stock products
+    Re-Stock:   All the low stock items
+    Quit:       Quit the program
+
+> 
