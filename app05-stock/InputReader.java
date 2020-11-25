@@ -39,20 +39,4 @@ public class InputReader
         }
         return inputLine;
     }
-
-    /**
-     * Read a line of text from standard input (the text terminal),
-     * and return it as a int.
-     *
-     * @return  A int typed by the user.
-     */
-    public int getInt()
-    {
-        int inputID = 0;
-        while(!reader.hasNextInt()){
-            System.out.print("> ");         // print prompt
-            inputID = reader.nextInt();
-        }
-        return inputID;
-    }
 }
