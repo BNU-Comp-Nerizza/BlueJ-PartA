@@ -29,7 +29,6 @@ public class Game
     private Room finalRoom;
     private int top;
     private ArrayList<Item> inventory = new ArrayList<Item>();
-    private static final String BATTERY = "battery";
 
     /**
      * Create the game and initialise its internal map.
@@ -531,6 +530,7 @@ public class Game
             for (Item items : inventory){
                 if (items.getItemName().equalsIgnoreCase("battery")){
                     useBattery();
+                    inventory.remove(index);
                     return true;
                 }
             }
