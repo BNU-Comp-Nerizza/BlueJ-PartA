@@ -528,13 +528,19 @@ public class Game
             System.out.println("That item is not in your inventory! Product cannot be used.");
         }
         else {
-            for (Item items : inventory){
-                if (items.getItemName().equalsIgnoreCase("battery")){
-                    useBattery();
-                    inventory.remove(index);
-                    return true;
-                }
+            if (useItem.getItemName().equalsIgnoreCase("battery")){
+                useBattery();
+                inventory.remove(index);
             }
+            else if (useItem.getItemName().equalsIgnoreCase("chips")){
+                System.out.println("You have eaten");
+                inventory.remove(index);
+            }
+            else if (useItem.getItemName().equalsIgnoreCase("computer")){
+                System.out.println("Computer does not have any charge");
+                inventory.remove(index);
+            }
+            return true;
         }
         System.out.println("Product cannot be used.");
         return false;
