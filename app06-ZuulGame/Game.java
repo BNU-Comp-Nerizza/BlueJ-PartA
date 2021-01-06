@@ -29,6 +29,8 @@ public class Game
     private Room finalRoom;
     private int top;
     private ArrayList<Item> inventory = new ArrayList<Item>();
+    private static final String BATTERY = "battery";
+    private int score = 0;
 
     /**
      * Create the game and initialise its internal map.
@@ -210,10 +212,9 @@ public class Game
     /**
      * Calculates the score of the player when item is picked up
      */
-    private int addScore()
+    private int addScore(Item items)
     { 
-        int score = 0;
-        for (Item items: inventory)
+        if (items != null)
         {
             score = score + items.getWeight();
         }
@@ -445,7 +446,7 @@ public class Game
             inventory.add(newItem);
             currentRoom.removeRoomItem(item);
             System.out.println("Picked up: " + item);
-            addScore();
+            addScore(newItem);
             System.out.println("Total number of battery in your inventory: "+ countBattery());
         }
     }
