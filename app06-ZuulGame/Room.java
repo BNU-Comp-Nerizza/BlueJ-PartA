@@ -95,7 +95,7 @@ public class Room
     }
 
     /**
-     * Add the items within the room
+     * Get the items within the room
      */
     public Item getRoomItem(String itemName)
     {
@@ -126,7 +126,7 @@ public class Room
     }
 
     /**
-     * Set the items within the room
+     * Add the items within the room
      */
     public void addItem(Item item)
     {

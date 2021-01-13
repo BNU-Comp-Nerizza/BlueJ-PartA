@@ -27,10 +27,10 @@ public class Game
     private Room roomStack[];
     private Room currentRoom;
     private Room finalRoom;
-    private int top;
     private ArrayList<Item> inventory = new ArrayList<Item>();
-    private static final String BATTERY = "battery";
+    private int top;
     private int score = 0;
+    private int energy = 0;
 
     /**
      * Create the game and initialise its internal map.
@@ -62,52 +62,46 @@ public class Game
     private void createRooms()
     {
         Room staffRoom, storageRoom, navigationRoom, medicalBay, oxygenRoom, cafeteria, securityRoom, engineRoom;
-
+        
+        // setting items to the rooms
         Item staffItem[] = {
                 new Item("Just a pieace of clothes, No help at all.", "T-Shirt", 5),
                 new Item("opened bag of chips","Chips", 5),
                 new Item( "Helps rechared the engine", "Battery", 10)
             };
-
         Item storageItem[] = {
                 new Item( "Dull kitchen knife for cutting foods","Knife",  10),
                 new Item( "Used for working out","Dumbbell", 70),
                 new Item( "Spare laptop in case of emergency", "Laptop", 8),
                 new Item( "Helps rechared the engine", "Battery", 10)
             };
-
         Item navigationItem[] = {
                 new Item( "A smartphone without any signal or battery.", "iPhone X",3),
                 new Item( "Helps rechared the engine","Battery", 10),
                 new Item( "Used to control the system cannot be carried", "Computer", 50),
                 new Item( "Used to connect the computers", "Cables", 6)
             };
-
         Item medicalItem[] = {
                 new Item( "Used for wounds", "Bandaid", 5),
                 new Item( "just a simple old trash can. no use","Trash Can", 2),
                 new Item( "Helps rechared the engine","Battery", 10),
                 new Item( "Just a syringe","Syringe", 1)
             };
-
         Item oxygenItem[] = {
                 new Item( "Store oxygen", "Oxygen Tank", 20),
                 new Item( "Spare spacesuit for the crewmate","Spacesuit", 18),
             };    
-
         Item cafeteriaItem[] = {
                 new Item("Fruits. That's all.","Apple",  3),
                 new Item( "Fruits. That's all.","Banana", 3),
                 new Item( "Fruits. That's all.","Orange", 3)
             };
-
         Item securityItem[] = {
                 new Item( "Old Keys from Earth","Pair of Keys",1),
                 new Item( "Helps rechared the engine","Battery", 10),
                 new Item( "opened bag of chips","Chips", 2),
                 new Item( "Just a pair of shoes","Shoes", 4)
             };
-
         Item engineItem[] = {
                 new Item( "Main machine that runs the spaceship","Engine Machine", 20),
                 new Item( "opened bag of chips","Chips", 2),
@@ -123,7 +117,8 @@ public class Game
         cafeteria = new Room("in the Cafeteria");
         securityRoom = new Room("in the Space Security Room");
         engineRoom = new Room("in the Space Engine Room");
-
+        
+        // add items to the room
         staffRoom = addItemsToRoom(staffRoom, staffItem);
         storageRoom = addItemsToRoom(storageRoom, storageItem);
         navigationRoom = addItemsToRoom(navigationRoom, navigationItem);
@@ -185,7 +180,6 @@ public class Game
             Command command = parser.getCommand();
             finished = processCommand(command);
         }
-
         System.out.println("Thank you for playing.  Good bye.");
     }
 
@@ -515,6 +509,7 @@ public class Game
 
         Item useItem = null;
         int index = 0;
+        Item items;
         for(int i=0; i<inventory.size(); i++)
         {
             if(inventory.get(i).getItemName().equalsIgnoreCase(item))
@@ -552,7 +547,6 @@ public class Game
      */
     private int useBattery()
     {
-        int energy = 0;
         player.setEnergy(player.getEnergy() + 1);
         System.out.println("Battery Recharging..");
         System.out.println("Energy: " + player.getEnergy());
