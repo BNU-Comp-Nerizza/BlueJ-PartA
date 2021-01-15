@@ -62,7 +62,7 @@ public class Game
     private void createRooms()
     {
         Room staffRoom, storageRoom, navigationRoom, medicalBay, oxygenRoom, cafeteria, securityRoom, engineRoom;
-        
+
         // setting items to the rooms
         Item staffItem[] = {
                 new Item("Just a pieace of clothes, No help at all.", "T-Shirt", 5),
@@ -117,7 +117,7 @@ public class Game
         cafeteria = new Room("in the Cafeteria");
         securityRoom = new Room("in the Space Security Room");
         engineRoom = new Room("in the Space Engine Room");
-        
+
         // add items to the room
         staffRoom = addItemsToRoom(staffRoom, staffItem);
         storageRoom = addItemsToRoom(storageRoom, storageItem);
@@ -180,7 +180,6 @@ public class Game
             Command command = parser.getCommand();
             finished = processCommand(command);
         }
-        System.out.println("Thank you for playing.  Good bye.");
     }
 
     /**
@@ -377,6 +376,12 @@ public class Game
                 System.out.println("Thank you for your hardwork, Captain " + player.getPlayerName());
                 return true;
             }
+            else if(currentRoom == finalRoom && player.getEnergy() < 5)
+            {
+                System.out.println("System loading... Error.. Insufficient Energy.. Error");
+                System.out.println("Error....Please Try Again....");
+                return true;
+            }
         }
         return false;
     }
@@ -528,16 +533,32 @@ public class Game
                 inventory.remove(index);
             }
             else if (useItem.getItemName().equalsIgnoreCase("chips")){
-                System.out.println("You have eaten");
+                System.out.println("You have eaten. Add + 5 points on your score");
                 inventory.remove(index);
+                score = player.getScore() + 5;
+                player.setScore(score);
             }
-            else if (useItem.getItemName().equalsIgnoreCase("computer")){
-                System.out.println("Computer does not have any charge");
+            else if (useItem.getItemName().equalsIgnoreCase("apple")){
+                System.out.println("You have eaten. Add + 10 points on your score");
                 inventory.remove(index);
+                score = player.getScore() + 10;
+                player.setScore(score);
+            }
+            else if (useItem.getItemName().equalsIgnoreCase("banana")){
+                System.out.println("You have eaten. Add + 15 points on your score");
+                inventory.remove(index);
+                score = player.getScore() + 15;
+                player.setScore(score);
+            }
+            else if (useItem.getItemName().equalsIgnoreCase("orange")){
+                System.out.println("You have eaten. Add + 20 points on your score");
+                inventory.remove(index);
+                score = player.getScore() + 20;
+                player.setScore(score);
             }
             return true;
         }
-        System.out.println("Product cannot be used.");
+        System.out.println("Product cannot be used");
         return false;
     }
 
