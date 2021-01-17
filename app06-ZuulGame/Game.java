@@ -83,12 +83,12 @@ public class Game
             };
         Item medicalItem[] = {
                 new Item( "Used for wounds", "Bandaid", 5),
-                new Item( "just a simple old trash can. no use","Trash Can", 2),
+                new Item( "just a simple old trash can. no use","Can", 2),
                 new Item( "Helps rechared the engine","Battery", 10),
                 new Item( "Just a syringe","Syringe", 1)
             };
         Item oxygenItem[] = {
-                new Item( "Store oxygen", "Oxygen Tank", 20),
+                new Item( "Store oxygen", "Tank", 20),
                 new Item( "Spare spacesuit for the crewmate","Spacesuit", 18),
             };    
         Item cafeteriaItem[] = {
@@ -97,7 +97,7 @@ public class Game
                 new Item( "Fruits. That's all.","Orange", 3)
             };
         Item securityItem[] = {
-                new Item( "Old Keys from Earth","Pair of Keys",1),
+                new Item( "Old Keys from Earth","Keys",1),
                 new Item( "Helps rechared the engine","Battery", 10),
                 new Item( "opened bag of chips","Chips", 2),
                 new Item( "Just a pair of shoes","Shoes", 4)
@@ -151,7 +151,8 @@ public class Game
     }
 
     /**
-     * Add items to the room.
+     * Add array of items to the room.
+     * @return room object 
      */
     private Room addItemsToRoom(Room room, Item items[])
     {
@@ -204,6 +205,8 @@ public class Game
 
     /**
      * Calculates the score of the player when item is picked up
+     * @param Items (items to be processed)
+     * @return scores that will be added
      */
     private int addScore(Item items)
     { 
@@ -232,6 +235,7 @@ public class Game
 
     /**
      * Adds the current room to stack
+     * 
      */
     private void push(Room room)
     {
@@ -497,6 +501,7 @@ public class Game
 
     /**
      * It allows player to use the items on their inventory
+     * @return true condition based on the item, false if there are no condition
      */
     private boolean useItem(Command command) 
     {
